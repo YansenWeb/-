@@ -1,0 +1,69 @@
+.map{ padding-top:4%; background: #fff;}
+.map .list{ text-align: center; }
+.map .list a{ display: inline-block;  font-size:1.4rem; color:#3d3d3d; line-height:2; margin:5% 4% 4%; }
+.map .list a.active{ border-bottom:2px solid #ae9679; color:#ae9679; }
+
+.map .map-img{ position: relative; width:94%; margin:0 auto; }
+.map .map-img span{position: absolute; z-index:10; width:32px; height: 38px; padding-top:8px; font-size: 12px; color: #FFF; line-height:12px; text-align: center; cursor: pointer; }
+.map .map-img span.red{ background: url(../img/red-icon.png) no-repeat center center; background-size:100% 100%; }
+.map .map-img span.gray{ background: url(../img/gray-icon.png) no-repeat center center; background-size:100% 100%; }
+.map .map-img span:hover{ transform: scale(1.8,1.8); transform-origin:50% 100%;}
+
+
+/*.map .map-img span.city1{ left:237px; top:327px;}
+.map .map-img span.city2{ left:250px; top:540px;}
+.map .map-img span.city3{ left:426px; top:450px;}
+.map .map-img span.city4{ left:548px; top:384px;}
+.map .map-img span.city5{ left:567px; top:596px;}
+
+.map .map-img span.city6{ left:498px; top:763px;}
+
+.map .map-img span.city7{ left:648px; top:338px;}
+
+.map .map-img span.city8{ left:645px; top:425px;}
+.map .map-img span.city9{ left:694px; top:492px;}
+.map .map-img span.city10{ left:694px; top:589px;}
+.map .map-img span.city11{ left:694px; top:687px;}
+.map .map-img span.city12{ left:722px; top:817px;}
+.map .map-img span.city13{ left:770px; top:402px;}
+
+.map .map-img span.city14{ left:794px; top:600px;}
+.map .map-img span.city15{ left:790px; top:687px;}
+.map .map-img span.city16{ left:798px; top:813px;}
+.map .map-img span.city17{ left:834px; top:415px;}
+.map .map-img span.city18{ left:830px; top:539px;}
+.map .map-img span.city19{ left:860px; top:677px;}
+.map .map-img span.city20{ left:876px; top:782px;}
+.map .map-img span.city21{ left:854px; top:327px;}
+.map .map-img span.city22{ left:880px; top:348px;}
+.map .map-img span.city23{ left:908px; top:431px;}
+.map .map-img span.city24{ left:910px; top:585px;}
+.map .map-img span.city25{ left:926px; top:717px;}
+
+.map .map-img span.city26{ left:957px; top:539px;}
+.map .map-img span.city27{ left:966px; top:631px;}
+.map .map-img span.city28{ left:1000px; top:543px;}
+.map .map-img span.city29{ left:1074px; top:135px;}
+.map .map-img span.city30{ left:1050px; top:216px;}
+.map .map-img span.city31{ left:977px; top:319px;}
+.map .map-img span.city32{ left:1010px; top:755px;}
+.map .map-img span.city33{ left:740px; top:900px;}*/
+
+
+
+
+/*.map .container{ width:72%; min-width:1200px; padding:4%;  margin:0 auto; background:#fff; box-shadow:0px 0px 30px rgba(25,25,25,.1); border-radius:20px; overflow: hidden;  }*/
+.map-sreach-box{ margin:2% auto; width:90%; }
+.map-sreach-box label{ margin-right:.5rem; margin-left:.5rem; font-size:1.4rem; }
+.map-sreach-box select{ width:8rem; height:3rem; border:1px solid #ebeced; border-radius:5px; font-size:18px; }
+.map-sreach-box button{ display: block; width:10rem; height:3rem; background: #424448; margin:0 auto; border-radius: 5px; margin-left:10px; border:none; color: #fff;  }
+
+.map .city-box{ width:100%; font-size:20px; line-height:2; margin-top:60px; display:inline-block; }
+.map .city-box span{ margin-right:25px; white-space: nowrap;   }
+
+.map .map-list{ border-top:1px solid #d2d2d2; padding-top:10px; margin-top:40px;  }
+.map .map-list li{ width:49%; float: left; border:1px solid #d2d2d2; box-sizing: border-box; line-height:2; padding:15px; margin-top:42px; }
+.map .map-list li:nth-child(2n+1){ margin-right:2%; }
+.map .map-list li h2{ font-size:18px; }
+.map .map-list li p{ font-size:17px;}
+.map .map-list li span{ font-size:14px;}

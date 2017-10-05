@@ -1,0 +1,32 @@
+
+/**
+ *
+ * Vertical Scrollbar
+ *
+ */
+.myScrollbarV {
+	position:absolute;
+	z-index:100;
+	width:8px;
+	bottom:60px;
+	top:60px;
+	right:1px;
+	border: 1px solid #603913;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	-o-border-radius:6px;
+	border-radius:6px;
+}
+
+.myScrollbarV > div {
+	position:absolute;
+	z-index:100;
+	width:100%;
+	background:#603913; 
+	border:1px solid #900;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	-o-border-radius:6px;
+	border-radius:6px;
+
+}

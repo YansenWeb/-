@@ -1,0 +1,44 @@
+.band-banner{ position: relative; overflow: hidden; cursor: pointer; }
+.band-title{ position: absolute; left:-1000px; top:50%;max-width:60%; margin-top:25px;  transform: translate(0,-50%);  }
+
+
+.about-product{ margin-top:80px; }
+.about-product .title{ margin-top:160px; margin-bottom:104px; }
+
+.pro-hot { width: 1000px; margin:0 auto;  }
+.pro-hot .item { width:410px; border:1px solid #ddd; border-bottom:0px solid #ddd;   }
+.pro-hot .item img.item-img{ width:400px; padding:5px; display: block;}
+
+.pro-hot .item .text{ height:63px; line-height:63px; font-size:20px; text-indent:15px; background: #ddd;  }
+.pro-hot .item .text span{ margin-right:10px; }
+
+.prodcut-box li{width:25%; margin-top:5%; float: left; font-size:18px; color: #1d1d1d; text-align: center; text-transform: uppercase; }
+
+.scroll{ padding:140px 0 50px; }
+.scroll-container{ width: 1600px; height: 286px; margin:0 auto; position: relative; z-index: 100; background: #fff; }
+.scroll-container .box { margin:0 auto;  width:1400px; overflow: hidden; position: relative;  }
+.scroll-container .box ul{ height: 286px; width:5000px; position: relative; left:0; top:0;   }
+.scroll-container .box li{ width:350px; float: left; height: 286px; position: relative; }
+.scroll-container .box li .box-t{ display: none; position: absolute; left:0; top:0; width:100%; height:100%; background: rgba(0,0,0,.5); text-align: center; line-height: 286px; color: #fff; font-size: 20px;  }
+.scroll-container .box li.cut .box-t{ display: block;  }
+.scroll-container .button-prev,.scroll-container .button-next{position: absolute; top:50%; margin-top:-50px; width:100px; height:100px; }
+.scroll-container .button-prev{ left:0px;  background:url(../img/arrow-left.png) no-repeat center center; }
+.scroll-container .button-next{ right:0px; background:url(../img/arrow-right.png) no-repeat center center; }
+
+@media screen and (max-width:1600px ) {
+	.scroll-container{ width:1400px; height:244px; }
+	.scroll-container .box { width:1200px;}
+	.scroll-container .box ul{ height: 244px; }
+	.scroll-container .box li{ width:300px; height:244px; }
+	.scroll-container .box li .box-t{ line-height:244px; }
+}
+
+@media screen and (max-width:1400px ) {
+	.scroll-container{ width:1000px; height:190px; }
+	.scroll-container .box { width:940px;}
+	.scroll-container .box ul{ height: 190px; }
+	.scroll-container .box li{ width:235px; height:190px; }
+	.scroll-container .box li .box-t{ line-height:190px; }
+	.scroll-container .button-prev{ left:-50px; }
+	.scroll-container .button-next{ right:-50px;}
+}

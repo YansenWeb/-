@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>犬心保</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width,target-densityDpi=device-dpi, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="" />
+<meta http-equiv="pragram" content="no-cache"/>
+<!-- <script src="http://cdn.bootcss.com/prefixfree/1.0.7/prefixfree.min.js"></script> -->
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+<!-- loading -->
+<div id="loading" style="display:none;" >
+   <img class="loading-bg" src="img/bg.jpg" width="100%" height="100%" />
+   <div class="container">
+     <img class="run-dog" src="img/loading.gif" width="435" >
+     <p>loading</p>
+     <span><i></i></span>  
+   </div>   
+</div>
+<!-- loading end -->
+<audio autoplay="autoplay"  id="music" src="img/dog.mp3" autobuffer loop></audio>
+<div id="wrap" style="display:none;" >
+    
+    <!-- 封面 -->
+    <div class="cover">
+       <img class="cover-img" src="img/index_bg.jpg" width="100%" height="100%" / >
+       <img class="cover-img1" src="img/index_bg1.jpg" width="100%" height="100%" / >
+       <img class="cover-t" src="img/index_t.png" width="548" height="431" />
+       <img class="rule-btn" src="img/rule_bg.png" width="107" height="109" />
+       <img class="start-btn" src="img/start_game.png" width="295" height="99" >
+       <img class="paiming-btn" src="img/ming.png" width="295" height="99" >
+    </div>
+
+    <!-- 封面 end -->
+
+    <!-- 故事原由介绍 -->
+    <div class="page2" style="display:none;">
+       <img class="bg" src="img/page2_bg.jpg"  width="100%" height="100%" />
+       <div class="text">
+          <img src="img/page2_text.png" width="640" height="564" /> 
+       </div>
+       <div class="dogs">
+          <img class="dog1" src="img/dog1.png" width="100%" /> 
+          <img class="dog2" src="img/dog2.png" width="100%" /> 
+          <img class="dog3" src="img/dog3.png" width="100%" /> 
+          <img class="dog4" src="img/dog4.png" width="100%" /> 
+       </div>
+    </div>
+   <!--  故事原由介绍 end -->
+
+       
+    <div class="page3" style="display:none" >
+        <img src="img/pege3_bg.jpg" width="100%" height="100%" />
+        <img class="cb" src="img/page3_cb.png" width="538" height="300" >
+        <img class="next" src="img/next.png"  width="295" height="99" >  
+    </div>
+
+
+    <div class="page4" style="display:none" >
+        <img src="img/page4_bg.jpg" width="100%" height="100%" />
+        <img class="rule" src="img/page4_rule.png" width="100%" height="100%" />
+        <img class="start-btn" src="img/start.png" width="295" height="99" >
+    </div>
+
+    
+    <div class="page5" style="display:none;" >
+        
+        <img src="img/page5_bg.jpg" width="100%" height="100%" >
+        <div class="time">
+          <div class="cir">TIME</div>
+          <div class="bar"><span><i></i></span></div>
+        </div>
+        <div class="points"><span>0</span>points</div>
+        <img class="dog" id="pos"  src="img/dog.png" width="183" height="188" >
+        <div id="con">
+           <img class="crose0" src="img/crose0.png" width="186" height="186" data-score="0" /> 
+           <img class="crose1" src="img/crose1.png" width="186" height="186" data-score="10" /> 
+           <img class="crose2" src="img/crose2.png" width="186" height="186" data-score="-5" /> 
+           <img class="crose3" src="img/crose1.png" width="186" height="186" data-score="10" /> 
+           <img class="crose4" src="img/crose3.png" width="186" height="186" data-score="-10" /> 
+           <img class="crose5" src="img/crose1.png" width="186" height="186" data-score="10" /> 
+           <img class="crose6" src="img/crose0.png" width="186" height="186" data-score="0"  /> 
+           <img class="crose7" src="img/crose1.png" width="186" height="186" data-score="10" /> 
+           <img class="crose8" src="img/crose2.png" width="186" height="186" data-score="-5"  /> 
+           <img class="crose9" src="img/crose3.png" width="186" height="186" data-score="-10" /> 
+           <img class="crose10" src="img/crose1.png" width="186" height="186" data-score="10" /> 
+        </div>
+    </div> 
+
+    <div class="form" style="display:none;" >
+       <img src="img/from_bg.png" width="540" height="834" />
+       <p class="crose">99999</p>
+
+       <input type="text" class="name" value="" />
+       <input type="tel" class="tel" value="" />
+       <input type="text" class="ads" value="" />
+       <input type="text" class="guige" value="" />
+       <img class="next-once" src="img/next_once.png" width="231" height="70"  />
+       <img class="ture-btn" src="img/ture_btn.png" width="296" height="96"  />
+    </div> 
+
+    <div class="alert-box" style="display:none;" >
+        <img src="img/alert_bg.png" width="100%" height="100%" >
+        <img class="share-btn" src="img/share_btn.png" width="230" height="70" />
+        <img class="scrose-btn" src="img/scrose_btn.png" width="230" height="70" />
+
+    </div>
+
+    <div class="rule1" style="display:none;" >
+       <img class="title" src="img/rule_icon.png" width="182" width="173" /> 
+       <img class="min-dog" src="img/min-dog.png" width="94" height="79" />
+       <ul>
+         <li>30秒时间内抢夺获得的分数越高越好，小心扣分，和炸弹。</li>
+         <li>正确填写信息以及选择宠物规格。</li>
+         <li>每位用户只能领取一次礼品。</li>
+         <li>活动时间：11月29日－12月6日</li>
+         <li>本次活动最终解释权归梅里亚中国所有</li>
+       </ul>
+       <img class="rule-bottom" src="img/rule_b_img.png" />
+
+       <img class="back-btn" src="img/back_btn.png" width="296" height="96" />
+    </div>  
+    
+    <div class="rank" style="display:none;">
+       <img class="rank-img"  src="img/jf_bg.png" />
+       <ul>
+         <li><img src="img/tx.png" width="80" height="80" /><div>彭于晏妹妹</div> 150分 </li>
+         <li><img src="img/tx.png" width="80" height="80" /><div>彭于晏妹妹</div> 150分 </li>
+         <li><img src="img/tx.png" width="80" height="80" /><div>彭于晏妹妹</div> 150分 </li>
+         <li><img src="img/tx.png" width="80" height="80" /><div>彭于晏妹妹</div> 150分 </li>
+         <li><img src="img/tx.png" width="80" height="80" /><div>彭于晏妹妹</div> 150分 </li>
+         <li><img src="img/tx.png" width="80" height="80" /><div>彭于晏妹妹</div> 150分 </li>
+       </ul> 
+
+       <img class="pre" src="img/next_btn.png">
+       <img class="next" src="img/pre_btn.png">
+
+       <img class="start_btn" src="img/start.png" width="296" height="96" />
+    </div>
+    
+    <div class="opacity_bg" style="display:none;" ></div>  
+    <div class="share" >
+        <img src="img/share_guiter.png" width="100%" />
+    </div>
+</div>
+<script type="text/javascript" src="js/index.js" ></script>
+</body>
+</html>

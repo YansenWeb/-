@@ -1,0 +1,71 @@
+/*新闻滚动*/
+.news-list{ background: #fff; padding:4% 0 4%; position: relative; z-index:100; }
+.news-list .container{ width:85%; height:30px; margin:0 auto; overflow: hidden; border-radius:15px; border:1px solid #ccc; 
+	padding-left:4%; padding-right:4%; position: relative;
+}
+
+.news-list .laba{ position: absolute; top:6px; }
+.news-list ul{ width:100%; padding-left:35px; float:right; box-sizing: border-box;  vertical-align: middle; font-size:14px;}
+.news-list ul li{ height:30px; line-height: 30px; position: relative; }
+.news-list ul span{ color: #696969; position: absolute; right:0; }
+.news-list a{ display: block; white-space:nowrap; text-overflow:ellipsis;overflow:hidden; margin-right:80px; box-sizing: border-box; color: #696969;}
+/*新闻滚动 end*/
+
+.main{ background: #fff; padding-bottom:4%; position: relative; z-index: 100; }
+.main .container{ width:93%; margin:0 auto; overflow: hidden;  }
+.main a{ display: block; width: 50%; float: left; overflow: hidden; position: relative; }
+.main img{ width:100%;}
+
+
+.product{ position:relative; z-index: 100; } 
+
+.ul-container{ width:85%; margin:0 auto 5%; overflow: hidden; }
+.tab-box{ width:93%; position: relative; margin:0 auto;  }
+.tab-box .right-btn,.tab-box .left-btn{ position: absolute; background:url(../img/tab_btn.png) no-repeat; width:20px; height: 30px; top:38px; }
+.tab-box .right-btn{ right:0px; transform:scale(-1,-1);}
+.tab-box .left-btn{ left:0px;}
+.pro-tab{ width:1000px;}
+.pro-tab li{ width:90px; margin:0 5px;  float: left; text-align: center; font-size:14px;  }
+.pro-tab li p{ display: none; }
+
+.pro-tab li i{ display: block; width:80px; height:80px; margin:10px auto; background-image:url(../img/icon-btn.png); background-repeat: no-repeat; }
+.pro-tab li i.icon1{ background-position:0 0;}
+.pro-tab li i.icon2{ background-position:-80px 0;}
+.pro-tab li i.icon3{ background-position:-160px 0;}
+.pro-tab li i.icon4{ background-position:-240px 0;}
+.pro-tab li i.icon5{ background-position:-320px 0;}
+.pro-tab li i.icon6{ background-position:-400px 0;}
+.pro-tab li i.icon7{ background-position:-480px 0;}
+.pro-tab li.active{ background:url(../img/pro-hover.png) no-repeat center top; background-size:100% auto;  }
+.pro-tab li.active p{ display: block;}
+
+.w30{ width:30%;}
+
+.pro-list{ width:93%; padding:.5rem; box-sizing: border-box;  margin:0 auto; background-color:#2c2c2c; overflow: hidden; }
+.pro-list div{ float: left; overflow: hidden; position: relative; }
+.pro-list div a,.pro-list div img{ display: block; }
+
+
+.pro-list .pro1{ width:36.2%; padding-right:1.2%; }
+.pro-list .pro2{ width:62.6%; padding-bottom:1.2%; }
+.pro-list .pro3{ width:30.7%; padding-right:1.2%; }
+.pro-list .pro4{ width: 30.7%;}
+
+.pro-list .new:before{ right:.8rem; top:.8rem; }
+.pro-list .icon-left.new:before{ left:.8rem;  }
+
+
+.case .title{ margin:6% auto 4%;}
+.case-box{ position: relative; }
+.case-box img{ display: block;  }
+.case-container{ position: absolute; left: 50%; top:50%; width:20rem; transform: translate(-50%,-50%); }
+
+
+
+.object .title{ margin:6% auto 4%;}
+.object .object-box{ margin:0 auto; max-width:1624px; width:93%;   border-left:1px solid #9d9d9d;border-top:1px solid #9d9d9d;border-bottom:1px solid #9d9d9d; }
+.object .object-item{ border-right: 1px solid #9d9d9d; box-sizing: border-box; float: left; width:50%; position: relative; overflow: hidden; cursor: pointer; }
+.object .object-item img{ display: block;}
+.object .object-item .mask{ position: absolute; left: 0px; top:-100%; width:100%; height: 100%;  background: rgba(0,0,0,.6); transition:all .2s linear;}
+.object .object-item:hover .mask{ top:0;}
+.object .object-item .mask h2{ position:absolute; top:50%; transform: translateY(-50%); width:100%;  text-align: center; color: #fff; font-size:20px; font-weight: normal;   }

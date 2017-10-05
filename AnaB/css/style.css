@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{tap-highlight-color:rgba(0,0,0,0); margin:0px; padding:0px;}
+a{text-decoration:none; border:none;}
+img{border:none;}
+input:focus,select:focus{ outline:none;}
+ul,li{ list-style:none;}
+html,body{ background:#FFF; overflow: hidden; }
+img{ display:block;}
+/*.btn:active{ transform:translate(2px,2px)}*/
+.fl{ float: left; }
+.fr{ float: right; }
+#wrap,.loading,.cover,.rule,.game,.ranking-list,.share,.over,.tips-num{ width: 640px; margin: 0 auto; position:absolute; min-height:1008px; top: 0px; bottom:0px;  height:100%; }
+#wrap{ display:none;}
+
+.on{ position: absolute; right:0px; top:0px; z-index: 1000; width:50px; height: 50px; margin:20px; background-repeat: no-repeat; background-position: 0 0; background-image:url(../img/sound_on.png);   }
+
+/*loading*/
+.loading{ position: absolute; z-index:20; width: 640px;}
+.loading .box{ position: absolute; left:240px; top: 320px;}
+.loading .box span{ display: block; width: 100%; top:200px; text-align: center; margin-left:-6px;  color: #ffda6a; font-size: 30px;}
+
+.p-a{ position:absolute;}
+/*首页*/
+.cover{ overflow: hidden;}
+.rule-btn{ left: 0px; top:0px; }
+.product1{ right:-13px; top:522px; transform:rotate(20deg); animation: translate 1.5s linear infinite alternate; }
+.product2{ right:40px; top:874px; transform:rotate(20deg);animation: translate 1.5s linear 0.5s infinite alternate; }
+.product3{ left:0; top:600px;  transform:rotate(20deg);animation: translate 1.5s linear 1s infinite alternate; }
+.start-btn{ left:215px; top:693px; }
+.ranking-list-btn{ left:215px; top:800px; }
+.logo{ left:285px; top:939px; }
+
+/*game*/
+.game{ background: #f9f9f9;}
+
+.progress-bar{ width:18px; height: 377px; border:3px solid #000; background: #fff; position: absolute; left:36px; top:328px;
+  border-radius:12px; z-index: 1000; box-shadow:5px 5px 5px rgba(0,0,0,.3); 
+  }
+.progress-bar div{ position: absolute; left:0; bottom: 0; width: 18px; height:0%; background: #90d16d; border-radius:9px; }
+
+.pointer{ position: absolute; bottom:-10px; z-index: 1000; pointer-events: none; display: none; animation: clicklate .3s linear infinite alternate; }
+
+.bgcolor-box{ background: #ececec; height: 282px;  }
+.num-box{ position: absolute; left:37px; top:20px; width: 148px; height: 127px; border-bottom:5px solid #ab9f87; background: #fff;}
+.num-box h2{ text-align: center; font-size:16px; line-height: 32px; }
+.num-box .num-score{ position: relative; line-height: 50px; font-size: 30px; left:13px; margin-top:12px;}
+.num-box .num-score img{ margin-right:10px;}
+.num-box .num-score .icon-1{ position: absolute; left:-8px; top:-12px; }
+.logo-box{ position: absolute; right:16px; top:12px;  width: 166px; height: 143px; border-bottom:5px solid #ab9f87; background: #fff;
+ text-align: center;
+ line-height: 35px;
+ font-size: 20px;
+ }
+
+.logo-box img{ margin:12px auto 0; }
+.tx-box{ position: relative; width: 50px; height: 50px; margin-left:10px; margin-right:10px;}
+.light{ position: absolute;}
+.scale-rotate{animation: scaleRotate .3s linear;}
+
+.cabinet{ position: absolute; right: 0px; top:222px; }
+
+.game-box{ position: absolute; left: 0; top:105px;  }
+
+.yun{ position: absolute; left:186px; top:5px; z-index: 101; display: none;
+ }
+
+.scale{
+  display: block;	
+  animation: scale 1s linear infinite alternate;
+}
+
+/*滚动条样式*/
+
+.myScrollbarV {
+    position: absolute;
+    z-index: 100;
+    width: 8px;
+    bottom: 7px;
+    top: 2px;
+    right: 10px;
+    background: #dadada;
+    border-radius: 4px;
+}
+
+.myScrollbarV > div {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    /* The following is probably what you want to customize */
+    background: #7a7a7a;
+}
+/*滚动条样式 End*/
+
+/*游戏按钮样式*/
+.game-btn-box{ position: absolute; left:0; bottom:0; width: 100%; height: 94px; border-top:3px solid #e2d6b6; z-index:100; background: url(../img/game-bottom.jpg) no-repeat; }
+.game-btn-box .btn{ position: absolute; top:-210px; padding:3px; width: 196px; height: 283px;}
+.game-btn-box .btn img{ margin:0 auto;}
+.game-btn-box .btn .pro{ display:none;}
+.game-btn-box .btn .anniu{ position: absolute; left:0px; bottom:15px; }
+.game-btn-box .btn1{ left:18px; }
+.game-btn-box .btn2{ left:225px; }
+.game-btn-box .btn3{ left:437px; }
+/*游戏按钮样式 End*/
+
+/*rule*/
+.rule,.share,.ranking-list,.over{ z-index:1000; background:rgba(0,0,0,0.8); }
+.rule img{ width:581px; height: 832px; position: absolute; left:27px; top:91px;}
+.rule span{ position: absolute; right:0px; top:60px; opacity: 0; width: 100px; height: 100px; }
+
+/*share*/
+.product-box{ position: relative;  width: 536px; height:822px; margin:0 auto; background: #fff; border-radius:20px; overflow: hidden; }
+.product-box img{ margin-left:auto; margin-right:auto; }
+.product-box .user-btn{ margin-top:35px; }
+.product-box .product-tips{ position: absolute; left:134px; bottom:5px;}
+
+
+/*排行榜*/
+.ranking-list .ranking-list-box{ width:516px; height: 790px; background: #fff; border-radius:10px; position: relative;
+ left:67px;  top:115px; 
+}
+.ranking-list li{ position: relative;  background: #f8f4db; width: 402px; height:80px; margin-left:41px; border-radius: 10px; vertical-align: middle; margin-bottom: 20px; line-height:80px; padding:14px 20px; }
+.ranking-list li h2{ width:140px; margin:0px 7px 0 25px; font-size: 25px; color: #494949; }
+.ranking-list li p{ margin-left:5px; font-size: 34px; color: #ff9421;  }
+
+#thelist .p-a{  left:-23px; top:38px; }
+
+.back-home{ position: absolute; left: 0; bottom:0; width: 100%; line-height: 95px; text-align: center; font-size: 25px; }
+  #wrapper {
+  position:absolute; 
+  z-index:1;
+  top:45px; 
+  bottom:95px; 
+  left:0;
+  width:100%;
+  overflow:auto;
+}
+
+#scroller {
+  position:absolute; 
+  z-index:1;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  width:100%;
+  padding:0;
+}
+
+/*领取优惠券*/
+.over .container{ width: 548px; height:877px; background: #fff; border-radius:10px;  position: absolute; left: 46px; top:85px; 
+  text-align: center;  
+}
+.over .container img{ margin-left:auto; margin-right:auto;}
+.over .container .over-img{ margin-top:79px; margin-bottom: 35px; }
+.over .container .use-quan{ margin-bottom:32px; }
+.over .container .get-icon{ position: absolute; left:18px; top:196px; z-index: 10;  }
+
+.over .container h2{ font-size: 48px; }
+.over .container h2 span{  color: #bca488;  }
+.over .container h3{ font-size: 41px; margin-bottom:40px;  }
+
+.over .container .once{ margin-top: 34px;  }
+
+.tips-num { z-index: 1000;  }
+.tips-num .tips{ position: absolute; left: 0px; bottom: 0px; width: 100%;  }
+.tips-num .num{ position: absolute; left: 177px; top:299px; z-index: 1;  }
+
+
+.opscale{
+  animation: opscale .3s linear alternate;
+}
+
+.scale1{
+  animation: scale1 .3s linear alternate;
+}
+
+@keyframes translate
+{
+	0%   { transform: translateY(0px) rotate(20deg); }
+	100% { transform: translateY(20px) rotate(20deg);  }
+}
+ 
+@keyframes scaleRotate
+{
+	0%,100% { transform: rotate(-10deg) scale(1); }
+	50% { transform: rotate(10deg) scale(1.5,1.5); }
+}
+
+@keyframes scale
+{
+  0%   { transform:scale(0,0);}
+  70%,80%,90%,100%{ transform:scale(1,1);}
+  75%{ transform:scale(.9,.9);}
+}
+
+@keyframes scale1
+{
+	0%,100%{ transform:scale(1,1);}
+	50%{ transform:scale(1.1,1.1);}
+}
+
+@keyframes opscale
+{
+  0%{ transform:scale(1,1); opacity:1;}
+  /*80%{ opacity:1; }*/
+  100%{ transform:scale(1.5,1.5); opacity:0; }
+}
+
+@keyframes clicklate
+{
+	0%{ transform:translate(0,0);}
+	100%{ transform:translate(5px,5px);}
+}
+
+

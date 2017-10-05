@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PVZ2</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,target-densityDpi=device-dpi, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <script type="text/javascript">
+       function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"
+        ];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    if(IsPC()){
+       window.location.href = "http://test2.net-show.cn/pvz-new/";
+    }
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollbar.css">
+    <script type="application/javascript" src="js/iscroll.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/js.KinerCode.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/jquery.imgpreload.min.js"></script>
+    <script type="text/javascript">
+    var t = (new Date).getTime();
+
+    var the_images = [];
+
+    the_images.push('img/arrow-down.png?i=1&t=' + t);
+    the_images.push('img/bg.jpg?i=2&t=' + t);
+    the_images.push('img/bg1.jpg?i=3&t=' + t);
+    the_images.push('img/border.png?i=4&t=' + t);
+    the_images.push('img/bottom.png?i=5&t=' + t);
+    the_images.push('img/cover.jpg?i=6&t=' + t);
+    the_images.push('img/daoyu.png?i=7&t=' + t);
+    the_images.push('img/form.png?i=8&t=' + t);
+    the_images.push('img/get_gift.png?i=9&t=' + t);
+    the_images.push('img/get-btn.png?i=10&t=' + t);
+    the_images.push('img/gift_bg.jpg?i=11&t=' + t);
+    the_images.push('img/gift1.png?i=12&t=' + t);
+    the_images.push('img/gou.png?i=13&t=' + t);
+    the_images.push('img/imp.png?i=14&t=' + t);
+    the_images.push('img/light.png?i=15&t=' + t);
+    the_images.push('img/load.png?i=16&t=' + t);
+    the_images.push('img/miner.png?i=17&t=' + t);
+    the_images.push('img/reg.png?i=18&t=' + t);
+    the_images.push('img/result_bg.png?i=19&t=' + t);
+    the_images.push('img/rule.png?i=20&t=' + t);
+    the_images.push('img/share.png?i=21&t=' + t);
+    the_images.push('img/tips.png?i=22&t=' + t);
+    the_images.push('img/title.png?i=23&t=' + t);
+    the_images.push('img/video-box.png?i=24&t=' + t);
+
+    var icnt = the_images.length;
+    var num = 0;
+    jQuery.imgpreload(the_images, {
+        each: function() {
+            var pattern = new RegExp("i=(\\d)", "gi");
+            var m = pattern.exec($(this).attr('src'));
+            var status = $(this).data('loaded') ? 'success' : 'error';
+            num++;
+            if (num > 2) {
+                $(".loading").show();
+            }
+            $(".loading span").html(((num / icnt) * 100).toFixed(0) + "%");
+        },
+        all: function() {
+            $(".loading").hide();
+            $('#wrap').show();
+        }
+    });
+    </script>
+</head>
+
+<body>
+    <div class="loading">
+        <img class="load" src="img/load.png" width="" />
+        <p>Loading...</p>
+        <span>0%</span>
+    </div>
+    <div id="wrap" style="display:none;">
+        <div class="page page1">
+            <img class="imp-img" src="img/imp.png" width="533" height="399">
+            <img class="bottom-img" src="img/bottom.png" width="750" height="158" />
+            <img class="arrow-down" src="img/arrow-down.png" width="103" height="76" />
+        </div>
+        <!-- 视频 -->
+        <div class="page page2">
+            <!-- <div class="page2-container" > -->
+            <img class="bottom-img" src="img/bottom.png" width="750" height="158" />
+            <div class="video-box">
+                <div class="video_content">
+                    <video id="video" src="http://video.baconbuy.com/ea/pvz2/modernday/video.mp4" width="100%" height="100%" controls></video>
+                </div>
+                <img class="miner" src="img/miner.png" width="150" height="209">
+                <img class="video-img" src="img/video-box.png" width="750" height="694">
+            </div>
+            <div class="rule">
+                <div class="gift1">
+                    <img class="gift-img" src="img/gift1.png" width="328" height="285" />
+                    <img class="light" src="img/light.png" width="415" height="321" />
+                </div>
+                <img src="img/rule.png" width="595" height="396" />
+                <!-- 开始测试 -->
+                <span class="start-btn"></span>
+            </div>
+
+            <a class="download"  href="http://g.talkyun.com.cn/files/pvz2-tw.html"><img src="img/download.png" /></a>
+            <!-- </div> -->
+        </div>
+        <!-- 问答 -->
+        <div class="page page3" style="display: none;">
+            <img class="form-bg" src="img/form.png" width="750" />
+            <input class="form-input" id="name" name="name" maxlength="20" type="text" placeholder="必填">
+            <input class="form-input" id="birthday" name="birthday" type="date" placeholder="必填">
+            <input class="form-input" id="email" name="email" maxlength="20" type="email" placeholder="选填">
+            <!-- 问题 -->
+            <div class="question question1" style="left:203px; top:589px;"></div>
+            <div class="question question1" style="left:422px; top:589px;"></div>
+            <div class="question question1" style="left:203px; top:639px;"></div>
+            <div class="question question1" style="left:422px; top:639px;"></div>
+            <div class="question question2" style="left:203px; top:766px;"></div>
+            <div class="question question2" style="left:422px; top:766px;"></div>
+            <div class="question question2" style="left:203px; top:816px;"></div>
+            <div class="question question2" style="left:422px; top:816px;"></div>
+            <input type="hidden" id="question1" value="" />
+            <input type="hidden" id="question2" value="" />
+            <div class="agreen-btn"></div>
+            <div class="tq"></div>
+            <a id="result"></a>
+        </div>
+    </div>
+    <!-- 浮层背景 -->
+    <div class="opa-bg"></div>
+    <!-- 注册 -->
+    <div class="reg" style="visibility: hidden;">
+        <img class="close" src="img/close.png" />
+        <img class="reg_bg" src="img/reg.png" width="750" height="815" />
+        <input class="tel" type="tel" value="" maxlength="11" placeholder="输入你的手机号" />
+        <span id="code" class="mycode"></span>
+        <input class="code" id="inputCode" type="code" maxlength="4" value="" placeholder="验证码" />
+        <div class="android input"></div>
+        <div class="ios input"></div>
+        <button class="submit" id="submit"></button>
+    </div>
+    <!-- 新闻弹窗  -->
+    <div class="news-pop" style="visibility: hidden;">
+        <div class="close"></div>
+        <div id="wrapper" style="overflow: hidden;">
+            <div id="scroller">
+                <h2 style="text-align: center;"><span style="color: #003366;">Electronic Arts Inc.</span><br><span style="color: #003366;">保密和Cookie协议</span><br></h2>
+                <div style="text-align: center;"><span style="color: #808080;"><strong>最近更新：2017年7月31日<br>生效日期：2017年8月31日</strong></span></div>
+                <br>
+                <div>
+                    <p>
+                        <br>
+                    </p>
+                    <br>
+                </div>
+                <div>
+                    <a href="http://privacy.truste.com/privacy-seal/validation?rid=280d2de5-b130-4c22-947f-094ff127001e&amp;lang=zh-cn" title="TRUSTe Privacy Certification" target="_blank"><img src="http://privacy-policy.truste.com/privacy-seal/seal?rid=280d2de5-b130-4c22-947f-094ff127001e" border="0" alt="TRUSTe Privacy Certification" style="border: none;"></a>
+                </div>
+                <br>我们非常重视您的隐私，慎重保障您的隐私权。本政策描述在您使用 EA 及其子公司提供的移动、在线和可下载产品及服务（“产品”）时，EA 会收集哪些信息。如需了解子公司列表，请点击<a href="https://www.sec.gov/Archives/edgar/data/712515/000071251517000035/ex-211subsidiariesofthereg.htm">https://www.sec.gov/Archives/edgar/data/712515/000071251517000035/ex-211subsidiariesofthereg.htm</a>。使用我们的产品即表示您同意本政策。
+                <br>
+                <br>EA加入了欧盟-美国 和瑞士-美国 隐私护盾框架。如需了解更多信息，请访问<a href="https://tos.ea.com/legalapp/WEBPRIVACYSHIELD/US/sc/PC/">https://tos.ea.com/legalapp/WEBPRIVACYSHIELD/US/sc/PC/。</a>
+                <br>
+                <br>
+                <br><strong><span style="color: #003366; font-size: 10pt;">目录</span><br><br></strong>
+                <ol>
+                    <li><a href="#section1">我们收集哪些信息</a></li>
+                    <li><a href="#section2">我们如何收集信息</a></li>
+                    <li><a href="#section3">我们如何使用您的信息</a></li>
+                    <li><a href="#section4">我们与第三方共享哪些信息</a></li>
+                    <li><a href="#section5">我们将您的信息保存在何处</a></li>
+                    <li><a href="#section6">我们如何保护您的个人信息</a></li>
+                    <li><a href="#section7">儿童</a></li>
+                    <li><a href="#section8">您的选择和控制</a></li>
+                    <li><a href="#section9">第三方服务</a></li>
+                    <li><a href="#section10">政策变更</a></li>
+                    <li><a href="#section11">联系我们</a></li>
+                </ol>
+                <br>
+                <h2><a name="section1"></a><span style="color: #003366;"><font size="4">1.我们收集哪些信息</font></span></h2>
+                <br>我们收集的信息取决于您使用的产品以及您如何使用产品。已收集的个人信息的控制方是 Electronic Arts Inc.，地址为：209 Redwood Shores Parkway, Redwood City, CA 94065。
+                <br>
+                <br>
+                <ol style="list-style-type: upper-alpha;">
+                    <li><strong><span style="color: #003366;">您直接提供给我们的信息</span><br><br></strong><span style="font-weight: normal; color: #000000;"><span style="font-weight: normal; color: #000000;">我们收集您提供的信息，包括：<br><br>• 您的电子邮件地址、用户名、国家、出生日期、电话号码和密码；<br>• 安全问题和答案；<br>• 人口统计资料，例如，答复我们产品相关的调查；<br>• 您向我们寻求帮助时提供的信息，例如，您的姓名和遇到的问题记录；<br>• 计费信息，例如，您的姓名、地址、电话号码和支付卡详情； <br>• 您的 EA账户信息；<br>• 您为了参加比赛或抽奖提供的信息。 如果您获胜，我们可能需要收集您的社会安全号码、邮寄地址和/或身份证号码，用于确定资格、递送奖品和税收目的。<br><br>当您参与社交功能（例如聊天）时，您所披露的信息为公开信息。我们可以存储和访问此类信息，其他用户可以阅读、复制、收集或使用此类信息，无需您同意。请确保您的隐私设置反映了您的偏好。<br><br></span></span> 当您参加在线多人游戏时，所有人均可查看您的游戏内个人档案信息、游戏使用和统计数据。我们可能会记录您包括设备输入在内的游戏使用，并将之与您的个人资料信息和游戏统计数据一起向游戏内其他玩家重播，而不另行通知，例如作为观众模式的一部分，或者用于游戏外宣传。
+                        <br>
+                        <br>
+                    </li>
+                    <li><span style="color: #003366;"><strong>我们在您使用我们的产品时收集的其他信息</strong></span>
+                        <br>
+                        <br>我们会在您使用我们的产品时自动收集其他信息，包括：
+                        <br>
+                        <br><span style="color: #000000;">• IP 地址；<br>• 移动和其他硬件或设备标识符；<br>• 浏览器信息，包括您的浏览器类型和您首选的语言；<br>• 引用页和退出页面，包括登陆页面和浏览页面；<br>• 平台类型；<br>• 有关您的媒体、设备、硬件和软件的信息，例如，您的硬件设置和组件、您安装或使用的 EA 软件和更新以及存在所需的插件；<br>• 关于您使用的 EA 产品类型及如何使用产品的详情；及<br>• 设备事件信息，包括故障报告、请求和引荐 URL 及系统活动细节（例如，您玩游戏时是否遇到错误或掉线）。<br><br>我们还可以利用 Cookie、浏览器 Web 存储（包括 HTML 5）和应用程序数据缓存等机制，收集信息并存储在您的本地设备上。<br><br></span></li>
+                    <li><span style="color: #003366;"><strong>第三方向我们提供的信息</strong></span>
+                        <br>
+                        <br><span style="font-weight: normal; color: #000000;"><strong><span style="color: #003366;"></span></strong>
+                        </span><span style="font-weight: normal; color: #000000;"><strong><span style="color: #003366;">PlayStation®3 电脑娱乐系统和PlayStation®4 电脑娱乐机。</span> </strong>在 PlayStation®3 电脑娱乐系统或 PlayStation®4 电脑娱乐机上注册玩我们的产品即表示您同意向 EA 提供您的 Sony Entertainment Network账号信息，以便我们为您创建一个 EA账户。您需要一个 EA账户才能在线玩 EA 的产品。Sony 向我们提供的信息包括您的姓名、电子邮件地址、在线ID、您所在的国家、州或省、语言以及出生日期。我们不会接收您的信用卡卡号或其他财务信息。
+                        <br>
+                        <br><span style="color: #003366;"><strong>Xbox Live。</strong></span>在 Microsoft 的 Xbox Live 服务上注册玩我们的产品即表示您同意 Microsoft 向我们提供您的 Microsoft 用户账户信息，以便我们为您创建一个 EA账户。您需要一个 EA账户才能在线玩 EA 的产品。Microsoft 向我们提供的信息包括您的玩家代号、电子邮件地址、国家、州或省、语言和年龄。我们不会接收您的信用卡卡号或其他财务信息。
+                        <br>
+                        <br><span style="color: #003366;"><strong>Wii / Wii U。</strong></span>在 Nintendo Wii 或 Wii U 控制台上注册玩我们的产品即表示您同意 Nintendo 向我们提供您的 Nintendo 用户账户信息，以便我们为您创建一个 EA账户。您需要一个 EA账户才能在线玩 EA 的产品。Nintendo 向我们提供的数据包括您的 Mii 信息、电子邮件地址、Nintendo Network ID、 好友名单、国家、语言和出生日期。我们不会接收您的信用卡卡号或其他财务信息。
+                        <br>
+                        <br> <strong><span style="color: #003366;">Nintendo Switch™。</span> </strong>在Nintendo Switch™主机上注册玩我们的产品，即表示您同意Nintendo向我们提供您的Nintendo Account信息，以便我们为您创建EA账户。您需要一个EA账户才能在线玩EA的产品。我们从Nintendo接收的数据包括您的昵称、电子邮件地址、好友列表<span>、</span>国家/地区、语言和出生日期。我们不会接收您的信用卡卡号或其他财务信息。
+                        <br>
+                        <br> <strong><span style="color: #003366;">移动平台。</span> </strong>如果您使用您的移动设备和/或平板电脑玩游戏或购买我们的游戏，我们会收到来自应用程序商店以及其他移动平台提供商的关于您的信息。此类信息包括您的用户名和/或设备ID 以及您购买产品的事实，例如，但不包括任何敏感或财务信息。我们的一些移动平台还会发送您授权其提供的信息给我们。我们的移动产品可能会请求您提供额外的个人信息，例如，推送通知标记、您的精确位置或联系人名单，我们仅在您明确同意的情况下收集此类信息。
+                        <br>
+                        <br><span style="color: #003366;"><strong>其他第三方</strong> </span>
+                        <br>
+                        <br>当您使用与我们产品相关的第三方服务时，我们会接收来自Facebook或Game Center等第三方的信息。当其他玩家选择与我们共享他们的联系人名单时，我们可能会收到关于您的信息。我们可能会收到来自第三方的信息，以补充您提供给我们的信息。我们主要利用这些公司提供的信息帮助我们向您投送相关广告。此类第三方代表名单详见<a href="https://tos.ea.com/legalapp/WEBPRIVACYAPPENDIX/US/sc/PC/">privacyappendix.ea.com/sc</a>。我们还将使用来自第三方的信息，例如通过您的IP地址帮助我们了解您的大概地理位置以用于缴税，或为您的所在地定制特别服务，并用于预防欺诈和/或滥用。</span>
+                    </li>
+                </ol>
+                <h2><a name="section2"></a><font size="4"><span style="color: #003366;">2.我们如何收集信息</span></font></h2>
+                <br>我们会通过在线表单或在您与我们的客户体验团队交谈时收集您直接提供的某些信息。我们和第三方还会利用下述技术收集信息，以提供卓越的体验。
+                <br>
+                <br>
+                <ol style="list-style-type: upper-alpha;">
+                    <li><strong><span style="color: #003366;">Cookie 和类似技术</span><br><br></strong><span style="font-weight: normal; color: #000000;">Cookie 是存储在您的互联网浏览器上的小文本文件。我们利用 cookie 和类似技术帮助我们了解您浏览了哪些网页、功能或广告以及玩了哪些游戏。这些信息可以帮助我们追踪您的购物车、衡量我们的广告的有效性、确保您不会重复看到相同的广告，并且有助于提升您的用户体验。您可以禁用 cookie、限制您允许的 cookie 类型或设置浏览器，以便在系统向您发送 cookie 时提醒您。如果您想寻求帮助，管理您的 cookie 首选项，请参阅<a href="http://www.allaboutcookies.org/">http://www.allaboutcookies.org</a>或独立 Web 浏览器提供的指引。<br><br><span>我们使用与 cookie 目的类似的其他技术。我们使用像素或清晰的 GIF 收集关于您使用我们的产品和您对营销电子邮件所做回应的信息。我们使用互联网日志文件（其中包含您的IP地址等技术数据），来监控产品流量、解决技术问题、检测和预防欺诈，以及强制执行我们的用户协议。其他例子包括 HTML 5 Cookie、Silverlight 应用程序存储、设备指纹和“Flash cookie”。如果您想删除 Flash cookie 或防止其保存下来，请访问<a href="https://www.macromedia.com/support/documentation/en/flashplayer/help/">www.macromedia.com/support/documentation/en/flashplayer/help/</a>，调整 acromedia 站隐私设置面板中的首选项。</span>
+                        <br><span>我们目前不会响应"请勿追踪”(DNT)信号。一旦确定，我们可能会采纳 DNT 标准。与此同时，您可能会通过改变 cookie 设置，选择退出某些类型的追踪法，包括某些分析和定制广告。</span>
+                        <br>
+                        <br>我们的产品中还会使用采用相同 cookie 和类似机制的分析、广告、反外挂和反欺诈技术。这些技术的说明如下。
+                        <br>
+                        <br>
+                        </span>
+                    </li>
+                    <li><span style="font-weight: normal; color: #000000;"><span style="font-weight: normal; color: #000000;"><span style="font-weight: normal; color: #000000;"><span style="color: #003366;"><strong>分析技术</strong></span>
+                        <br>
+                        <br>
+                        </span>
+                        </span><span style="font-weight: normal;">我们使用我们自己的游戏服务器以及内部和第三方分析技术收集关于您如何使用我们的产品、您的计算机或设备以及我们的产品健康的信息。 <br><br>例如，当您使用我们的产品时，EA 可能会收集和存储来自您的计算机或设备的数据。此类信息包括关于您的计算机或设备和操作系统的技术和相关信息（如 IP 地址和设备 ID）、关于您的功能使用情况、游戏和使用统计的信息、系统交互以及外围硬件用于下文第 3 节所述目的的情况。如果您离线玩游戏，此类数据将存储在您的设备上并将在您的设备连接至互联网时传输至 EA。如果您参与了线上服务，EA 还会收集、使用、存储、传输和公开显示游戏的统计数据（包括分数、排名和成就），或标识由您与其他玩家创建并共享的内容。<br><br>我们的产品中集成的第三方分析服务将他们收集的 EA 服务相关信息与他们随着时间的推移，在不同网站单独收集的信息相结合。其中有许多公司根据自己的隐私政策收集和使用信息。运作我们产品的第三方分析公司代表名单详见<a href="https://tos.ea.com/legalapp/WEBPRIVACYAPPENDIX/US/sc/PC/">privacyappendix.ea.com/sc</a></span></span><span style="font-weight: normal; color: #000000;"><span style="font-weight: normal;">。</span></span>
+                        <br>
+                        <br>
+                    </li>
+                    <li><strong><span style="color: #003366;">广告服务技术</span></strong>
+                        <br>
+                        <br>我们的一些产品采用广告服务技术，用到 cookie、清晰的 GIF、网站信标、像素追踪法和其他类似技术，例如，向您提供服务的标识符。其中一些技术可以同步或连接不同网站、移动应用程序和设备的行为。这些是针对您的兴趣量身定制的广告。例如，我们会为您提供我们认为您可能会感兴趣的游戏报价。或者，如果您对某个游戏表现出兴趣，您稍后可能会在 EA 或第三方网站收到该游戏或类似产品的广告。其他游戏中的广告技术让广告能够暂时上传到您的游戏、Web 浏览器或移动设备中，您在上线之后会将其替换掉。
+                        <br>
+                        <br>这些技术收集和使用信息，让我们能够为您提供适当的广告，并帮助追踪结果和衡量有效性。除了标识符，此类信息包括：
+                        <br>
+                        <br>• 提供的广告和广告的位置；
+                        <br>• 广告可见的时长；
+                        <br>• 域类型、IP 地址、广告大小；及
+                        <br>• 广告的反响。
+                        <br>
+                        <br>在向您交付广告时，第三方广告公司会将通过我们的产品和服务收集到的信息与他们在不同时间和网站独立收集到的信息相结合。其中有许多公司根据自己的隐私政策收集和使用信息。若要获取在我们的网站上运作自己的网络以及在线和/或移动产品和/或服务的广告服务公司代表名单以及如何在适当情况下选择退出的信息，请访问<a href="https://tos.ea.com/legalapp/WEBPRIVACYAPPENDIX/US/sc/PC/">privacyappendix.ea.com/sc</a>。
+                        <br>
+                        <br>如需了解关于其中一些广告网络惯例以及如何选择退出第三方有针对性的广告，请访问<a href="https://www.networkadvertising.org/">https://www.networkadvertising.org</a>、<a href="https://www.aboutads.info/choices/">https://www.aboutads.info/choices/</a>、<a href="http://youradchoices.ca/">http://youradchoices.ca/</a>或<a href="https://www.youronlinechoices.eu/">https://www.youronlinechoices.eu/</a>。请注意，选择退出并不意味着您不会看到广告，只是意味着您所看到的广告可能与您的兴趣不太相关。
+                        <br>
+                        <br>
+                    </li>
+                    <li><strong><span style="color: #003366;">反外挂和防欺诈技术</span></strong>
+                        <br>
+                        <br>EA 致力于为所有玩家提供一个安全和公平的游戏环境。当您登录使用我们的其中一种产品、设置一个 EA账户或购买产品时，我们或第三方会利用 cookie 和类似技术，或收集有关您的机器或设备的数据，以创建机器“指纹”或机器组件的“哈希代码”，用于预防欺诈、安全和认证目的。我们的产品也会使用其他反外挂技术。 </li>
+                </ol>
+                <h2><font size="4"><a name="section3"></a><span style="color: #003366;">3.我们如何使用您的信息</span></font></h2>
+                <br> 我们采用以下方式单独和共同使用您的个人及非个人信息：
+                <br>
+                <br><span style="color: #003366;"><strong>运行我们的业务并且提高和定制您的游戏体验，包括以下措施：</strong></span>
+                <br>
+                <ul>
+                    <li>运作、改进和开发我们的游戏和服务； </li>
+                    <li>填充在线排行榜和启用在线匹配； </li>
+                    <li>通过观众模式为您和其他玩家提供重播； </li>
+                    <li>帮助您找到您的好友或向您的好友介绍 EA 产品或服务； </li>
+                    <li>促进社交网络上的共享； </li>
+                    <li>提供广告和衡量广告的有效性； </li>
+                    <li>衡量我们的服务是否健康； </li>
+                    <li>建立和维护您注册的账户； </li>
+                    <li>提供您可能喜欢的游戏体验；</li>
+                    <li>建立忠诚度计划；</li>
+                    <li>方便您在多台可用的设备上游戏；</li>
+                    <li>识别、修复和解决错误及服务错误； </li>
+                    <li>提供软件更新； </li>
+                    <li>激活或验证您的游戏，并保存游戏进度和统计数据；</li>
+                    <li>符合您的偏好并提供动态内容；及 </li>
+                    <li>有助于保持我们的服务安全和公平、解决争议、调查和帮助遏制欺诈和非法行为、遵守法律并强制执行我们的协议和政策。 </li>
+                </ul>
+                <span style="color: #003366;"><strong>为您提供支持，包括：</strong></span>
+                <br>
+                <ul>
+                    <li>帮助识别和解决您的账户或游戏问题；</li>
+                    <li>通过调查或问卷调查探究您的意见；</li>
+                    <li>与您沟通，并回应您的具体请求或问题；及</li>
+                    <li>管理和发送关于您的账户、产品、购买、订购和保证的确认书和重要信息。</li>
+                </ul>
+                <span style="color: #003366;"><strong>个性化我们与您的通信，包括：</strong></span>
+                <br>
+                <ul>
+                    <li>出示报价和/或您可能会喜欢的游戏相关信息； </li>
+                    <li>向您提出建议；及 </li>
+                    <li>个性化适合您的广告，提供有针对性的营销、服务更新和促销活动。</li>
+                </ul>
+                <h2><font size="4"><a name="section4"></a><span style="color: #003366;">4.我们与第三方共享哪些信息</span></font></h2>
+                <br> 未经您同意，我们不会与独立的第三方共享直接确认您身份的个人信息（例如，您的姓名、电子邮件或邮寄地址），除非法律有此规定，或者我们确定，为强制执行我们的权利、财产或业务或保护我们的玩家或第三方，披露属合理必要。我们会与第三方共享匿名或汇总信息，或不会直接确认您身份的其他数据，比如，您在排行榜上的角色或表现出使用我们产品的倾向。
+                <br>
+                <br>出于各种原因，我们会聘用位于您居住国（包括欧洲经济区（EEA）以外）内外的第三方代表我们收集或处理个人信息，例如，进行市场调查、推进信用卡受理或发送电子邮件。当我们的第三方代理或服务提供商收集或接收个人信息时，我们要求他们仅代表我们根据本政策使用此类数据。
+                <br>
+                <br>我们不会故意向独立的第三方透露 18 岁以下儿童的个人信息，即使获得同意亦如此。
+                <br>
+                <br>然而，如果发生重组、剥离、合并、出售或破产，我们会将收集到的所有信息传输给相关第三方，如果法律有规定，我们会征得您的同意。
+                <br>
+                <br>我们不会控制您的浏览器发送给第三方的信息，例如，在您的互联网活动的正常过程中接收信息的广告网络和分析公司。当第三方技术或社交工具集成到我们的产品后，您使用我们的产品时，所述第三方可能会收集信息。例如，Facebook 的“Like”按钮。<span style="font-weight: bold;"><span style="font-weight: bold;"><br></span></span>
+                <h2><font size="4"><a name="section5"></a><span style="color: #003366;">5.我们将您的信息保存在何处</span></font></h2>
+                <br>我们收集到的个人信息可能会因 EA 及其子公司或第三方机构运营的美国或任何其他国家的《保密和Cookie协议》中所述之目的被存储和处理。通过使用我们的产品，您允许您的个人信息可能会被传输至美国及其他国家的收件人手中，这些国家法律可能不会像本国法律对待本国居民或市民一样提供同水平的隐私保护。
+                <br>
+                <br>本《保密和Cookie协议》所述的 Electronic Arts 隐私惯例遵守亚太经济合作组织 (APEC) 跨境隐私规则体系。APEC CBPR 体系为各个组织提供了整体框架，旨在保护 APEC 成员经济体之间的个人信息传输隐私。有关 APEC 框架的更多信息，详见<a href="https://www.apec.org/Groups/Committee-on-Trade-and-Investment/~/media/Files/Groups/ECSG/CBPR/CBPR-PoliciesRulesGuidelines.ashx">https://www.apec.org/Groups/Committee-on-Trade-and-Investment/~/media/Files/Groups/ECSG/CBPR/CBPR-PoliciesRulesGuidelines.ashx</a>。
+                <br>
+                <h2><font size="4"><a name="section6"></a><span style="color: #003366;">6.我们如何保护您的个人信息</span></font></h2>
+                <br>我们玩家信息的安全是 EA 的优先考虑事项，我们采取了一系列措施帮助保障信息的安全，包括加密敏感的财务信息。即使如此，也不存在完美无缺的安全措施。这意味着我们不能保证您的信息的安全性，我们概不就任何未经授权使用或访问我们控制的信息承担任何责任。
+                <br>
+                <h2><font size="4"><a name="section7"></a><span style="color: #003366;">7.儿童</span></font></h2>
+                <br>保护儿童的在线隐私权对于 EA 至关重要。许多EA在线或移动产品及服务针对一般受众设计而成，不会故意收集任何儿童的个人信息。当用户确定自己是儿童（即年龄在 16 岁或相关地域规定的最低年龄以下），根据适用法律，我们将：(1) 不会提供供其输入个人信息的路径；(2) 仅收集特定信息用于有限的目的（符合适用法律）；(3) 阻止或限制儿童访问相关服务（例如，聊天功能）；和/或 (4) 征得家长的同意后方可收集、使用和共享其子女的个人信息。
+                <br>
+                <br>通过我们的移动应用程序，您的子女能够收到本地的应用程序通知，这不会收集任何个人信息。
+                <br>
+                <br>请注意，如果您同意您的子女使用 EA 在线或移动产品和服务，这可能包括一般受众通信服务，例如，电子邮件、即时通讯和在线群组，您的子女将能够与各个年龄层的其他用户沟通并向其披露个人信息。
+                <br>
+                <br>如果您是家长，希望撤销您之前提供的同意书、浏览从您的子女那里收集的信息或删除此类信息，请联系您所在国家的相应隐私政策管理员（列于<a href="http://privacyadmin.ea.com/">privacyadmin.ea.com</a>）、致信 Privacy Policy Administrator, 209 Redwood Shores Parkway, Redwood City, CA 94065 或致电 (650) 628-1393。
+                <br>
+                <br>收集的信息将按照本《保密和Cookie协议》规定的方式保存（见上文第 6 节）。如果我们对我们如何使用、收集或共享您子女的个人信息做出重大变更，我们会通过电子邮件或游戏中的通知告知家长，以获得可核查的家长同意书，允许您子女的个人信息用于新用途。
+                <br>
+                <br>我们鼓励您与子女讨论如何与陌生人交流以及在网上披露个人信息。您和您的子女应该浏览我们的在线安全网页，网址是<a href="https://tos.ea.com/legalapp/OnlineSafety/US/sc/PC/">https://tos.ea.com/legalapp/OnlineSafety/US/sc/PC/</a>，了解关于安全使用互联网的更多信息。
+                <br>
+                <br>在任何情况下，我们不会以披露超出参与活动合理所需范围的个人信息为条件，要求儿童参与比赛等活动。在某些网站上，我们根本不允许儿童参加，无论是否征得同意。
+                <br>
+                <h2><font size="4"><a name="section8"></a><span style="color: #003366;">8.您的选择和控制</span></font></h2>
+                <br>当涉及到信息的重要用途和收集时，我们给您有意义的选择。例如，您可以更新您的账户信息和偏好，选择加入或退出 EA 营销电子邮件，并选择是否与选择的EA合作伙伴共享您的信息。如果您在授予批准后想在任何时候选择退出，请联系您所在国家的相应隐私政策管理员（列于 <a href="http://privacyadmin.ea.com/">privacyadmin.ea.com</a>）或致信 Privacy Policy Administrator, Electronic Arts Inc., 209 Redwood Shores Parkway, Redwood City, CA 94065。
+                <br>
+                <br>您还可以通过您的 EA账户设置浏览和更改您的大多数首选项。如果您需要其他协助，请联系<a href="https://help.ea.com/en/">help.ea.com/en/</a>。
+                <br>
+                <br>您可以停用您的 EA账户或删除与您的账户相关的个人信息，只需联系<a href="https://help.ea.com/en/">help.ea.com/en/</a>或您所在国家的隐私政策管理员（列于网站<a href="http://privacyadmin.ea.com/">privacyadmin.ea.com</a>）即可。如果您这样做，您将无权访问 EA 游戏或与您的账户相关的服务。请注意，EA 可能保留所需的信息来解决争议、强制执行我们的用户协议、保护我们的合法权利并遵守技术和法律要求以及关系到我们的产品的安全性、完整性和运作的约束条件。在我们为您提供服务、创造和改进我们的产品、遵守法律以及运作我们的业务合理所需的期间，我们将保留您的个人信息。
+                <br>
+                <br>您可以访问我们所持有的关于您的个人信息。如要请求访问，向我们发送电子邮件<a href="mailto:privacy_policy@ea.com">privacy_policy@ea.com</a>，标题为“Subject Access Request”。在我们处理任何请求之前，我们可能会要求您提供一些个人信息，以核实您的身份，在法律允许的情况下，我们会要求付款。在当地法律允许的情况下，我们可能会拒绝不合理或不切实际的请求。我们会在合理的时间内回应您的请求。
+                <br>
+                <br>您还可以调整您的浏览器设置来阻止某些针对 cookie 等内容进行在线追踪的程序。
+                <br>
+                <h2><font size="4"><a name="section9"></a><span style="color: #003366;">9.第三方服务</span></font></h2>
+                <br>我们的网站和产品可能包含广告或第三方服务（例如，Facebook 的“Like”按钮或第三方网站链接）。如果您点击这些链接（包括广告），您将离开 EA 网站，转到您选择的网站。如果您访问第三方网站或使用第三方服务，您应该查阅该网站或服务的隐私政策。
+                <br>
+                <h2><font size="4"><a name="section10"></a><span style="color: #003366;">10.政策变更</span></font></h2>
+                <br>我们可能会不定期更新本政策，因此，请经常查阅本政策。我们会在变更生效前三十天在主页（<a href="http://www.ea.com/asia">www.ea.com/asia</a>）上发布通知告知您重大变更。您若继续使用我们的产品则意味着您接受这些更改内容。一旦您接受本政策，未经您明确同意变更的条款，我们不会强制执行我们真诚视为重大的未来变更。如果您被要求接受对本政策的重大更改，但您拒绝接受，您不得继续使用向您提供的产品。
+                <br>
+                <h2><font size="4"><a name="section11"></a><span style="color: #003366;">11.联系我们</span></font></h2>
+                <br>如果您要投诉或对于本政策有任何疑问，请通过下述方式联系我们：<a href="mailto:privacy_policy@ea.com">privacy_policy@ea.com</a>。如果在隐私或数据使用方面您有尚未解决的担忧，而我们未给出令您满意的答复，请登录 <a href="https://feedback-form.truste.com/watchdog/request">https://feedback-form.truste.com/watchdog/request</a>，联系我们位于美国的第三方争议解决供应商，为您免费解决。
+                <br>
+                <br>如要查看经 TRUSTe 认证的网站列表，请访问<a href="https://privacy.truste.com/privacy-seal/validation?rid=280d2de5-b130-4c22-947f-094ff127001e&amp;lang=zh-cn">https://privacy.truste.com/privacy-seal/validation?rid=280d2de5-b130-4c22-947f-094ff127001e&amp;lang=zh-cn</a>。对于移动应用程序，请访问 <a href="https://tos.ea.com/legalapp/CERTIFIEDAPPS/US/en/PC/">https://tos.ea.com/legalapp/CERTIFIEDAPPS/US/en/PC/</a>。
+                <br>
+                <br>如需了解关于本政策的更多信息和更新，请访问<a href="https://tos.ea.com/legalapp/WEBPRIVACY/US/sc/PC/">privacy.ea.com/sc</a>。
+                <br>
+                <br>
+                <br>
+                <br>
+                <center>
+                    <div name="versions" style="width: 300px; height: auto; border: 1px solid black;">
+                        <dl>
+                            <dt>以前的《保密和Cookie协议》：
+                                <br>
+                                <br> <a href="https://tos.ea.com/legalapp/WEBPRIVACY/US/sc/PC/10282016">最近更新： 2016年10月28日</a>
+                                <br> <a href="https://tos.ea.com/legalapp/WEBPRIVACY/US/sc/PC/05172016">最近更新： 2016年05月17日</a>
+                                <br> <a href="https://tos.ea.com/legalapp/webprivacy/US/sc/PC/01262016">最近更新： 2016年01月26日</a>
+                                <br> <a href="https://tos.ea.com/legalapp/webprivacy/US/sc/PC/11182012">最近更新： 2012年11月18日</a>
+                                <br> <a href="https://tos.ea.com/legalapp/webprivacy/US/sc/PC/12052011">最近更新： 2011年12月5日</a></dt>
+                        </dl>
+                    </div>
+                </center>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <!-- 交卷 -->
+    <div class="result-box" style="display:none;">
+        <img class="title" src="img/title.png" width="750" />
+        <img class="result-img" src="" />
+        <img id="result-img" style="display: none;" src="img/result_bg.png" />
+        <img id="twelve" style="display: none;" src="img/twelve/baiyang1.png" />
+        <img id="border" style="display: none;" src="img/border.png" />
+        <canvas id="images_canvas" style="visibility: hidden;"></canvas>
+        <img class="tips" src="img/tips.png" width="39" height="341" />
+        <img class="get-btn" src="img/get-btn.png" width="203" height="74" />
+        <img class="share-btn" src="img/share.png" width="260" height="91" />
+    </div>
+    <!-- 领取成功 -->
+    <div class="success" style="display:none;">
+        <img class="get_gift" src="img/get_gift.png" width="750" />
+        <img class="light" src="img/light.png" />
+        <input type="text" class="copycode" id="copycode" value="15461132131" />
+        <button class="copy-btn" data-clipboard-action="copy" data-clipboard-target="#copycode">复制</button>
+        <div class="back"></div>
+    </div>
+    <div class="console">正在生成图片</div>
+    <!-- 分享 -->
+    <div class="share" style="display:none;">
+        <img src="img/share-img.png" width="100%" />
+    </div>
+    <!--     <div class="protocol" style="display: none;" >
+        
+    </div>  -->
+    <style type="text/css">
+    #ruler {
+        visibility: hidden;
+        white-space: nowrap;
+        font-size: 48px;
+    }
+    </style>
+    <span id="ruler">test</span>
+    <script src="js/index.js"></script>
+    <script src="js/code.js"></script>
+    <script type="text/javascript">
+    var myscroll;
+
+    function loaded() {
+        setTimeout(function() {
+                myscroll = new iScroll("wrapper", {
+                    hScrollbar: false,
+                    checkDOMChanges: true
+                });
+            },
+            100);
+    }
+    window.addEventListener("load", loaded, false);
+    </script>
+</body>
+
+</html>

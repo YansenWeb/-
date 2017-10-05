@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>牙口乐</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width,target-densityDpi=device-dpi, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="" />
+<meta http-equiv="pragram" content="no-cache"/>
+<script src="http://cdn.bootcss.com/prefixfree/1.0.7/prefixfree.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/touch-0.2.14.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="newcanvas" style="display:none;"></canvas>
+  <div class="upload"> <img class="none" src="img/upload2_bg.jpg" /> <img class="btn rule-btn" src="img/rule-btn.png" width="97" />
+    <div class="upload-box" ><img class="tips" src="img/tips.png" width="523" /> <img class="tape" src="img/tape.png" width="261" >
+    <canvas id="mycanvas"></canvas>
+    <input id="file" type="file" onchange="javascript:setImagePreview(this);" accept="image/*" capture="camera" />
+    <div class="sclac" id="sclac"></div>
+    <img class="big-glasses" src="img/tags_glasses.png" width="315" />
+    <img class="big-mouth" src="img/tags_mouth.png" width="196" />
+    <img class="big-yabang" id="target" src="img/yabang.png" data-x="0" data-y="0" width="143" />
+    <div class="cache_image" style="position:absolute;top:0;left:0;display:none;"></div>
+    </div>
+    <img class="user-tips" src="img/user-tips.png" width="341" />
+    <div class="tags-box">
+      <div class="tags tags-mouth"> <img src="img/tags_mouth.png" width="100%" /> </div>
+      <div class="tags tags-glasses" > <img src="img/tags_glasses.png" width="100%" /> </div>
+      <img class="tags-tips" src="img/tags-tips.png" width="397" /> </div>
+    <div class="btn-box"> <img class="btn mg-btn upload-btn" src="img/upload_btn.png" width="225" /> <a><img class="btn ture-btn"  id="confirm" src="img/upload-ture.png" width="225" /></a> <a href="upload.html"><img class="btn reset-btn" src="img/upload-reset.png" width="225" /></a> </div>
+  </div>
+  <!--活动机制-->
+  <div class="rule">
+    <div class="rule-back"></div>
+    <div class="rule-c">
+      <div>点击活动机制，这里只是一段假字，为什么要用假字,点击活动机制，这里只是一段假字，为什么要用假字。点击活动机制，这里只是一段假字，为什么要用假字。点击活动机制，这里只是一段假</div>
+      <div>点击活动机制，这里只是一段假字，为什么要用假字,点击活动机制，这里只是一段假字，为什么要用假字。点击活动机制，这里只是一段假字，为什么要用假字。点击活动机制，这里只假字，为什么要用假字</div>
+      <div>点击活动要用假字点击活动机制，这里只是一段假字，为什么要用假字</div>
+    </div>
+  </div>
+  <div class="from-box">
+      <div class="from-t">
+          <img class="tape" src="img/tape.png" width="150" />
+          <img class="from-title" src="img/from-title.png" width="454" />
+          <img class="createimg" src="" width="304" />
+      </div>
+      
+      <div class="from_contianer">
+        <input type="text" name="name" value="" placeholder="输入你的姓名" />
+        <input type="tel" name="tel" value="" placeholder="输入你的手机号码" />
+        <input type="text" name="address" value="" placeholder="输入你的收货地址" />
+        <select>
+            <option value="体重&lt;4.5公斤" selected = "selected" >体重&lt;4.5公斤</option>
+            <option value="4.5公斤&lt;体重&lt;5公斤" >4.5公斤&lt;体重&lt;5公斤</option>
+            <option value="4.5公斤&lt;体重&lt;5公斤" >4.5公斤&lt;体重&lt;5公斤</option>
+            <option value="4.5公斤&lt;体重&lt;5公斤" >4.5公斤&lt;体重&lt;5公斤</option>
+            <option value="4.5公斤&lt;体重&lt;5公斤" >4.5公斤&lt;体重&lt;5公斤</option>
+        </select>
+        <img class="from-ture" src="img/upload-ture.png" width="225" />
+      </div>
+  </div>
+  <div class="result-box">
+    <div class="result-container" >
+      <img src="img/ruselt_bg.png" width="426" />
+      <div class="result-btn">
+         <img class="btn share-btn" src="img/invite-btn.png" width="225" />
+         <a href="show.html"><img class="btn" src="img/look_btn.png" width="225" /></a>
+      </div>
+    
+    
+    </div>
+  
+  </div>
+  
+  <div class="share" >
+    <img src="img/share.png" width="100%">
+  </div>
+</div>
+<script type="text/javascript" src="js/perfect-scrollbar.with-mousewheel.min.js" ></script>
+<script src="js/iscroll-zoom.js"></script>
+<script src="js/hammer.js"></script>
+<script type="text/javascript" src="js/uploadImage.js" ></script>  
+<script src="js/jquery.photoClip.js"></script>
+<script src="js/exif.js"></script>
+<script>
+var Ori=0;
+var obUrl = '';
+var URL;
+var newcanvas = document.getElementById("newcanvas");
+newcanvas.width = 488;
+newcanvas.height = 488;
+var c1 = newcanvas.getContext("2d");
+$("#sclac").photoClip({
+	width: $("#sclac").width(),
+	height: $("#sclac").height(),
+	file: "#file",
+	ok: "#confirm",
+	loadStart: function() {
+		console.log("照片读取中");
+	},
+	loadComplete: function() {
+		console.log("照片读取完成");
+	},
+	clipFinish: function(dataURL) {
+		var newImg = new Image();
+		newImg.src = dataURL;
+		c1.drawImage(newImg,0,0,488,488);
+		console.log(dataURL);
+		URL = dataURL;
+		$(".cache_image").attr("data-src",dataURL);
+		$("#sclac").css({"pointer-events":"none"});
+		$(".big-yabang").show();
+		$(".big-mouth").show();
+		$(".big-glasses").show();
+	}
+});
+
+$(function() {
+	   touch.on('#target', 'touchstart', function(ev) {
+					ev.preventDefault();
+		});
+		var target = document.getElementById("target");
+		var dx, dy;
+		var _Left = target.style.left;
+			touch.on('#target', 'drag', function(ev) {
+				dx = dx || 0;
+				dy = dy || 0;
+				var offx = dx + ev.x + "px";
+				var offy = dy + ev.y + "px";
+				this.style.webkitTransform = "translate3d(" + offx + "," + offy + ",0)";
+				$(this).attr("data-x",offx);
+				$(this).attr("data-y",offy);
+			});
+			touch.on('#target', 'dragend', function(ev) {
+				dx += ev.x;
+				dy += ev.y;
+				//$('.div1').text("当前x值为:" + dx + ", 当前y值为:" + dy + ".");
+			});
+	 });				
+	 var iflag = 0;
+	 var sflag = 0;
+	 $(".tags-mouth").click(function(){
+	   if(iflag){
+		  $(".big-mouth").show();
+		  iflag = 0;   
+		}else{
+		  $(".big-mouth").hide();
+		  iflag = 1;	
+		}	 
+	})
+	 $(".tags-glasses").click(function(){
+	   if(sflag){
+		  $(".big-glasses").show();
+		  sflag = 0;   
+		}else{
+		  $(".big-glasses").hide();
+		  sflag = 1;	
+		}	 
+	})
+	
+	var step = 0;
+	
+	$(".upload .upload-btn").click(function(){
+	  if(step == 0){
+		alert("请先选择图片！");
+		return false;  
+	  }	
+	  $(".user-tips").show();
+	  $(".tips").show();
+	  $(".btn-box a").show();
+	  $(this).hide();	
+	})
+	
+	function setImagePreview(obj) {
+		step = 1;
+		selectFileImage(obj);
+		$("#sclac").show();
+		$("#file").hide();
+		//openphoto();
+		var preview, img_txt, localImag,file_head = document.getElementById("file_head"),
+			picture = file_head.value;
+		if (!picture.match(/.jpg|.gif|.png|.bmp/i)) return alert("您上传的图片格式不正确，请重新选择！"), !1;
+		if (preview = document.getElementById("preview"), file_head.files && file_head.files[0]) preview.style.display = "block",
+			preview.style.width = "63px",
+			preview.style.height = "63px",
+			preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);
+		else {
+			file_head.select(),
+				file_head.blur(),
+				img_txt = document.selection.createRange().text,
+				localImag = document.getElementById("localImag"),
+				localImag.style.width = "63px",
+				localImag.style.height = "63px";
+			try {
+				localImag.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)",
+					localImag.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = img_txt
+			} catch (f) {
+				return alert("您上传的图片格式不正确，请重新选择！"), !1
+			}
+			preview.style.display = "none",
+				document.selection.empty()
+		}
+		return document.getElementById("DivUp").style.display = "block", !0
+	}
+
+	var flag = 0;
+	var getUrl = $(".none").attr("src");
+	$(".ture-btn").click(function(){
+	  if(flag == 0 ){
+		$(".user-tips").hide();
+		$(".tips").hide();
+		$(".rule-btn").hide();
+		$(".upload").css({"background":"url("+ getUrl +")"});
+		$(".upload-box").css({"top":"75px"});
+		$(".tags-box").show();
+		$(this).attr("id","");
+		flag =1;  
+	  }else{
+		createMyCanvas();  
+		$(".from-box").fadeIn(200);
+	  }	
+	})
+	
+	
+	function createMyCanvas(){
+	  var _Left = parseInt($("#target").css("left"))+ parseInt($("#target").attr("data-x"));
+	  var _Top = parseInt($("#target").css("top"))+ parseInt($("#target").attr("data-y"));
+	  URL = $(".cache_image").attr("data-src");
+	  var canvas = document.getElementById("mycanvas");
+	  var c = canvas.getContext("2d");
+	  canvas.width = 488;
+	  canvas.height = 488;
+//	  if(URL){
+//		  var img = new Image();
+//		  img.src = URL ;
+		  c.drawImage(newcanvas,0,0,488,488);
+//      }else{
+//	   alert("获取链接失败！");
+//	  }
+	  if(iflag == 0){
+		  var img1 = new Image();
+		  img1.src = $(".big-mouth").attr("src");
+		  c.drawImage(img1,147,298,196,196);
+	  }
+	  if(sflag == 0){
+		  var img2 = new Image();
+		  img2.src = $(".big-glasses").attr("src");
+		  c.drawImage(img2,89,32,315,315);
+	  }
+	  var img3 = new Image();
+	  img3.src = $(".big-yabang").attr("src");
+	  c.drawImage(img3,_Left,_Top,143,90);
+	 setTimeout(function(){
+		$(".createimg").attr("src",canvas.toDataURL("image/png"));
+	  },100)
+	}
+ </script>
+<script type="text/javascript" src="js/script.js" ></script>
+</body>
+</html>

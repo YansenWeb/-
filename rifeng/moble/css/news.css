@@ -1,0 +1,37 @@
+.news-list{ background: url(../img/news-bg.jpg) repeat-x;  }
+
+
+.news-list .tab{ width:70%; margin:0 auto; padding:4% 0 3%; }
+.news-list .tab li{ width:50%; box-sizing:border-box;  border:1px solid #fff; float: left; text-align: center; line-height:2; font-size:1.2rem;  cursor: pointer; }
+.news-list .tab li.active{ border:1px solid #ceb290; color: #ceb290; }
+
+.news-box{ width:100%; margin:0 auto;}
+
+.news-box li{ width:46%; float: left; padding:1%; margin:2%; color: #767676; background:#fff; box-sizing: border-box;  border:1px solid #e5e4e4; box-shadow:0px 0px 30px rgba(25,25,25,.2); }
+.news-box li h3{ font-size:1rem; margin:1% 0 2%; -webkit-line-clamp:2; overflow: hidden; display: -webkit-box; -webkit-box-orient:vertical; text-overflow: ellipsis; }
+.news-box li>p{  font-size:.7rem; margin-bottom:30px; -webkit-line-clamp:2; overflow: hidden; display: -webkit-box; -webkit-box-orient:vertical; text-overflow: ellipsis; }
+.news-box li a{ float: right; margin-top:1rem; line-height:1.5; font-size:.8rem; }
+.news-box li a span{ color:#5aa1d8;}
+.news-box li .time{ color: #848484; text-align: left; margin-bottom:.2rem;}
+.news-box li .time .date{ font-size:1.8rem; line-height:1; }
+.news-box li .time p{ display: inline-block; font-size:.8rem; border-top:1px solid #848484; line-height:1.5;}
+
+.news-article{ background:#fff url(../img/news/news-article-bg.jpg) no-repeat; background-size:100% auto; padding-top:4%;  }
+
+.news-container { width:90%; padding:4%; box-sizing: border-box; margin:4% auto 6%; background:rgba(255,255,255,.9); color: #3d3d3d; border-radius:1rem; box-shadow:0px 0px 30px rgba(25,25,25,.2);  }
+
+.news-info .info{ width:180px; }
+.news-info .info a{ display: block; width:50%; line-height:2; font-size:1rem; box-sizing: border-box; text-align: center; float: left; border:1px solid transparent;   }
+.news-info .info a.active{ border:1px solid #ceb290; color: #ceb290; }
+.bread-crumb{ font-size:1rem; line-height:2;}
+.news-container h1 { margin-top:4%; margin-bottom:3%; font-size:1.4rem; line-height:1.5; }
+.news-container .push-time { font-size:1.3rem; padding-bottom:1.5rem; }
+
+
+.news-article .swiper-container{ margin-bottom: 0px; top:0; }
+.news-article article{ border-top:1px solid #959595; border-bottom: 1px solid #959595; font-size:1.2rem; line-height:1.5; padding-top:4%;  }
+.news-article article p{ text-align: justify; margin-bottom:1.5rem;  }
+.news-article article img{ margin-bottom:1.5rem; }
+
+.page-list{ font-size:1.4rem; line-height:1.7; position: relative; text-align: center; }
+.back-list{ margin-top:2rem; font-size:1.8rem; font-weight: bold; text-align: center; }

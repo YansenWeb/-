@@ -1,0 +1,5 @@
+﻿.BreakingNewsController{ overflow:hidden; height:70px; position:relative;}
+.BreakingNewsController ul{  display:block; list-style:none; position:absolute; left:0px; }
+.BreakingNewsController ul li{list-style:none; display:none;}
+.BreakingNewsController ul li a{text-decoration:none; color:#333; display:inline-block; overflow:hidden; padding:0;}
+.easing a, .easing span{transition:.25s linear; -moz-transition:.25s linear; -webkit-transition:.25s linear;}

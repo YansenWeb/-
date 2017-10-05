@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>犬心保</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width,target-densityDpi=device-dpi, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="" />
+<meta http-equiv="pragram" content="no-cache"/>
+<!-- <script src="http://cdn.bootcss.com/prefixfree/1.0.7/prefixfree.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.imgpreload.min.js"></script>
+    <script type="text/javascript">
+    var t = (new Date).getTime();
+
+    var the_images = [];
+
+    the_images.push('img/loading.png?i=1&t=' + t);
+    the_images.push('img/alert_bg.png?i=2&t=' + t);
+    the_images.push('img/bg.jpg?i=3&t=' + t);
+    the_images.push('img/bz.gif?i=4&t=' + t);
+    // the_images.push('img/cover.jpg?i=4&t=' + t);
+    the_images.push('img/cover.gif?i=5&t=' + t);
+    the_images.push('img/cover_img.png?i=6&t=' + t);
+    the_images.push('img/dog_ys.png?i=7&t=' + t);
+    the_images.push('img/form_bg.jpg?i=8&t=' + t);
+    the_images.push('img/guai1.png?i=9&t=' + t);
+    the_images.push('img/guai2.png?i=10&t=' + t);
+    the_images.push('img/guai3.png?i=11&t=' + t);
+    the_images.push('img/hx.gif?i=12&t=' + t);
+    the_images.push('img/jifen_btn.png?i=13&t=' + t);
+    the_images.push('img/jifen_btn1.png?i=14&t=' + t);
+    the_images.push('img/next_step.png?i=15&t=' + t);
+    the_images.push('img/page2_down.png?i=16&t=' + t);
+    the_images.push('img/page2_text1.png?i=17&t=' + t);
+    the_images.push('img/page2_text2.png?i=18&t=' + t);
+    the_images.push('img/page2_up.png?i=19&t=' + t);
+    the_images.push('img/page3_img1.png?i=20&t=' + t);
+    the_images.push('img/page3_img2.png?i=21&t=' + t);
+    the_images.push('img/page3_img3.png?i=22&t=' + t);
+    the_images.push('img/page3_text1.png?i=23&t=' + t);
+    the_images.push('img/page3_text2.png?i=24&t=' + t);
+    the_images.push('img/page4.jpg?i=25&t=' + t);
+    the_images.push('img/page5_bottom.jpg?i=26&t=' + t);
+    the_images.push('img/qiang.png?i=27&t=' + t);
+    the_images.push('img/rank_bg.png?i=28&t=' + t);
+    the_images.push('img/rule.jpg?i=29&t=' + t);
+    the_images.push('img/rule_btn.png?i=30&t=' + t);
+    the_images.push('img/score_bg.png?i=31&t=' + t);
+    the_images.push('img/share.png?i=32&t=' + t);
+    the_images.push('img/share_btn.png?i=33&t=' + t);
+    the_images.push('img/star.png?i=34&t=' + t);
+    the_images.push('img/start_btn.png?i=35&t=' + t);
+    the_images.push('img/time1.png?i=36&t=' + t);
+    the_images.push('img/time2.png?i=37&t=' + t);
+    the_images.push('img/ture_btn.png?i=38&t=' + t);
+    the_images.push('img/ygb.png?i=39&t=' + t);
+
+    var icnt = the_images.length;
+    var num = 0;
+    jQuery.imgpreload(the_images, {
+        each: function() {
+            var pattern = new RegExp("i=(\\d)", "gi");
+            var m = pattern.exec($(this).attr('src'));
+            var status = $(this).data('loaded') ? 'success' : 'error';
+            num++;
+            if(num>2){$("#loading").show();}
+            $("#loading span").html((num/icnt).toFixed(2)*100+"%");
+        },
+        all: function() {
+            $("#loading").hide();
+            $('#wrap').show();
+        }
+    });
+</script>
+</head>
+<body>
+<div id="loading" >
+<img src="img/loading.png" style="display:none;" />
+<div class="container" >
+   <!-- <img src="img/loading.png" width="230" height="214" /> -->
+   <div class="loading_animate"></div>
+   <span>0%</span>
+</div>
+</div>
+<div class="sound_icon"></div>
+<audio autoplay="autoplay" id="music" src="img/music.mp3" autobuffer loop></audio>
+<div id="wrap" style="display:none;" >
+    <!-- 封面 -->
+    <div class="cover" >
+       <!-- <img class="cover-img" src="img/cover.jpg" width="100%" height="100%" / > -->
+       <img class="cover-img" src="img/cover.gif" width="100%" / >
+       <img class="start-btn" src="img/start_btn.png" width="310" height="99" >
+       <img class="paiming-btn" src="img/jifen_btn.png" width="310" height="99" >
+    </div>
+    <!-- 封面 end -->
+
+    <!-- 故事原由介绍 -->
+    <div class="page2"  style="display:none" >
+       <img class="animated fadeInDown page2-up" src="img/page2_up.png" width="100%" />    
+       <img class="animated fadeInUp page2-down" src="img/page2_down.png" width="100%" />    
+       <img class="animated fadeInRight dog-ys" src="img/dog_ys.png" width="100%" />    
+       <img class="animated bounceIn page2-text1" src="img/page2_text1.png" width="263" height="204" />    
+       <img class="animated bounceIn page2-text2" src="img/page2_text2.png" width="404" height="279" />    
+       <img class="animated bounceIn step" src="img/next_step.png" width="249" height="137" />    
+    </div>
+   
+
+       
+    <div class="page3" style="display:none" >
+       <img class="animated fadeInLeft page3-img1" src="img/page3_img1.png" width="100%" />    
+       <img class="animated fadeInRight page3-img2" src="img/page3_img2.png" width="100%" />    
+       <img class="animated fadeInLeft page3-img3" src="img/page3_img3.png" width="100%" />    
+       <img class="animated bounceIn page3-text1" src="img/page3_text1.png" width="317" height="144" />
+       <img class="animated bounceIn page3-text2" src="img/page3_text2.png" width="380" height="380" />
+       <img class="animated fadeIn ygb" src="img/ygb.png" width="361" height="573" />
+       <img class="animated fadeIn step" src="img/next_step.png" width="249" height="137" /> 
+    </div>
+
+    <div class="page4" style="display:none;" >
+        <img src="img/page4.jpg" width="100%" height="100%" />
+    </div>
+
+    <!--  故事原由介绍 end -->
+
+    <div class="page5" style="display:none;" >
+        <img src="img/bg.jpg" width="100%" >
+        <img class="page5-bottom" src="img/page5_bottom.jpg" width="640" />
+        <img class="qiang" src="img/qiang.png" width="258" />
+        <div class="time">
+          <div class="bar"><img src="img/time2.png" width="210" height="68" /></div>
+        </div>
+        <div class="points">分数：<span>0</span></div>
+        <div id="con">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+        </div>
+        <div class="hx">
+           <img src="img/ykl.png" width="75" height="34" />
+           <!-- <img class="animated zoomIn star" src="img/star.png" width="166" height="161" > -->
+        </div>
+    </div> 
+
+    <div class="form" style="display:none;" >
+       <p class="crose"><span>0</span>分</p>
+       <input type="text" class="name" value="" />
+       <input type="tel" class="tel" value="" />
+       <input type="text" class="ads" value="" />
+       <input type="text" class="guige" value="" />
+       <img class="ture-btn" src="img/ture_btn.png" width="296" height="96"  />
+    </div> 
+
+    <div class="alert-box" style="display:none;" >
+       <div class="opacity_bg" ></div>
+       <div class="container" >
+        <img src="img/alert_bg.png" width="466" height="628" >
+        <img class="share-btn" src="img/share_btn.png" width="232" height="79" />
+        <img class="scrose-btn" src="img/jifen_btn1.png" width="232" height="79" />
+       </div> 
+    </div>
+
+    <div class="rule"  style="display:none" >
+       <img src="img/rule.jpg" width="100%" height="100%" />    
+
+       <img class="rule-btn" src="img/rule_btn.png" width="217" height="97" />
+    </div>  
+    
+    <div class="rank" style="display:none" >
+       <div class="container">
+         <div class="close" ></div>
+         <ul>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+        </ul> 
+         <ul style="display:none;">
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+        </ul> 
+         <ul style="display:none;">
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+        </ul> 
+         <ul style="display:none;">
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+           <li><img src="img/tx.png" width="58" height="72" /><div>彭于晏妹妹</div> 150分 </li>
+        </ul> 
+
+         <span class="pre" ></span>
+         <span class="next" ></span>
+       </div>
+
+       <img class="start_btn" src="img/start_btn.png" width="296" height="96" />
+    </div>
+    
+    <!-- <div class="opacity_bg" style="display:none;" ></div>   -->
+    <div class="share" >
+        <img src="img/share.png" width="100%" />
+    </div>
+</div>
+<script type="text/javascript" src="js/index.js" ></script>
+</body>
+</html>

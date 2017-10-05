@@ -1,0 +1,27 @@
+/*.about-product{ margin-top:80px;}*/
+.about-product .title{ margin-top:-3%; margin-bottom:4%; }
+.ws-video{ margin-top:5%; }
+
+.pro-hot { width:92%; margin:0 auto;  }
+.pro-hot .item { width:48%; border:1%; border:1px solid #ddd; border-bottom:0px solid #ddd; box-sizing: border-box;   }
+.pro-hot .item img.item-img{ width:100%; padding:5px; box-sizing: border-box; display: block;}
+.pro-hot .item .text{ line-height:1.5rem; font-size:.5rem; background: #ddd;  overflow: hidden; }
+.pro-hot .item .text span{ display: block; width:80%; box-sizing: border-box;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-left:10px; }
+.pro-hot .item .text img{ width:1.5rem; }
+
+.prodcut-box li{ width:33.333%; position: relative; margin-top:5%; float: left; font-size:18px; color: #1d1d1d; text-align: center; text-transform: uppercase; }
+.prodcut-box li img{ width:60%; }
+.prodcut-box li.new:before { right:14%; top:17%; }
+.prodcut-box li p { font-size:1rem; width:80%; margin:0 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;   }
+
+
+.scroll-container{ width: 94%; margin:4% auto 0; position: relative; }
+.scroll-container .box { margin:0 auto; width:100%; overflow: hidden; position: relative;  }
+.scroll-container .box li{ width:25%; float: left; position: relative; }
+.scroll-container .box li a{ display: block; }
+.scroll-container .box li img{ width: 100%; display: block;  }
+.scroll-container .box li .box-t{ position: absolute; left:0; bottom:0; width:100%; background: rgba(0,0,0,.5); text-align: center; line-height:2; color: #fff; font-size:.7rem;  }
+.scroll-container .box li.cut .box-t{ display: block;  }
+.scroll-container .button-prev,.scroll-container .button-next{position: absolute; top:50%; margin-top:-50px; width:100px; height:100px; }
+.scroll-container .button-prev{ left:0px;  background:url(../img/arrow-left.png) no-repeat center center; }
+.scroll-container .button-next{ right:0px; background:url(../img/arrow-right.png) no-repeat center center; }

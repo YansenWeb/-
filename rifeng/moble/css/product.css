@@ -1,0 +1,41 @@
+/*产品列表*/
+.product-list .container{ background: #fff; }
+
+.product-list .tab{ width:80%; margin:0 auto; padding:4% 0; }
+.product-list .tab li{ width:33.3333%; text-align: center; float: left; font-size:1.2rem; color: #554f4a; }
+.product-list .tab li p{ margin-top:.5rem; display: none; }
+.product-list .tab li.tab1 i{ background-position:0 0;}
+.product-list .tab li.tab2 i{ background-position:-140px 0;}
+.product-list .tab li.tab3 i{ background-position:-280px 0;}
+.product-list .tab li.active{ background:url(../img/pro-hover.png) no-repeat center top; background-size:80px 80px;  }
+.product-list .tab li.active p{ display: block; }
+
+.prodcut-box{ width:92%; margin:20px auto; }
+.prodcut-box>div{ overflow: hidden; width: 100%; }
+.prodcut-box .title{ margin-bottom:2%; }
+.prodcut-box li{ width:33.333%; margin-top:5%;  float: left; font-size:.6rem; color: #1d1d1d; text-align: center; text-transform: uppercase; }
+.prodcut-box li img{ max-width:80%; margin:0 auto; }
+.prodcut-box li p{ width:90%;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/*产品详情*/
+.pro-detail{ width:92%;  color: #7d7d7d; margin:0 auto;    }
+.pro-detail a{ font-size: 20px; display: block; width:150px; height: 60px; background: #373737; margin-top: 30px; line-height: 60px; color:#fff; text-align: center;  }
+.pro-detail h1{ font-size: 2rem; line-height:1.5; padding:4% 0; border-bottom:1px solid #000; }
+.pro-detail h1 small{ font-size: 1rem; }
+.pro-text{ overflow: hidden; }
+.pro-detail .pro-tips{ display: inline-block; float: left;  margin-right:4%; margin-top:5%; border-radius:10px; color:#fff; line-height:3rem;  padding:0 4%; background: #313131; }
+.pro-detail .text{ width:70%; float: left; padding:4% 0; font-size:.8rem; line-height:1.9; }
+.pro-detail .text pre{ font-family: initial; }
+.pro-detail .text td{ vertical-align: text-top; }
+
+.mode-info{ border-top:1px solid #000; line-height:2; overflow: hidden;   }
+.mode-info .go-shop{  float: left; margin-top:5%; margin-bottom:5%; width:70%; }
+.mode-info img.tmall{ max-width: 100%; }
+.mode-info img.shop{ opacity: .15; max-width: 100%; }
+
+.hot .title{ margin-top:-4%; }
+.hot-list{ width:100%; margin:0 auto; }
+.hot-list li{ width:33.33333%; position: relative; float: left; text-align: center; font-size:1rem; line-height:1.5; }
+.hot-list li img{ width:70%; }
+.hot-list li h3{ font-weight: normal; }
+.hot-list li.new:before{ left:10%; top:0;}

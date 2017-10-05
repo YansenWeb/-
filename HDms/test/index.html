@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <script src="js/jquery.js"></script>
+    <title>cs</title>
+    <style type="text/css">
+         *{ margin:0px; padding:0px;}
+         #open{ width: 200px; height:100px; box-sizing: border-box;  border:1px solid #ccc; position:relative; overflow: hidden;}
+         #open div{ position: absolute; top:0px;  width: 100px; height: 100px; background: #000; }
+         .open-left{ left:0px;}
+         .open-right{ right:0px;}
+         .list-box{ width:50px; padding:25px; height: 400px; }
+         .list-box div{ width:50px; height: 50px; margin-bottom:10px; }
+         .list-box div:first-child{ position:relative;}
+         .red{ background:red;}
+         .orange{ background:orange;}
+         .blue{ background:blue;}
+         .green{ background:green;}
+         .grad{ background:#ccc;}
+         .blank{ background:#000;}
+    </style>
+
+</head>
+<body>
+<div id="open" >
+  <div class="open-left" ></div>	
+  <div class="open-right" ></div>	
+</div>
+
+<div class="list-box" >
+	<div class="red"></div>
+	<div class="orange" ></div>
+	<div class="green"></div>
+	<div class="blue" ></div>
+	<div class="grad" ></div>
+	<div class="blank" ></div>
+</div>
+
+
+</body>
+<script>
+// 快速响应click事件
+(function() {
+    var isTouch = ('ontouchstart' in document.documentElement) ? 'touchstart' : 'click',
+        _on = $.fn.on;
+    $.fn.on = function() {
+        arguments[0] = (arguments[0] === 'click') ? isTouch : arguments[0];
+        return _on.apply(this, arguments);
+    };
+})();
+
+function open(){
+  $(".open-left").animate({left:"-100px"},1000);
+  $(".open-right").animate({right:"-100px"},1000);
+}
+
+function close(){
+  $(".open-left").animate({left:0},1000);
+  $(".open-right").animate({right:0},1000);	
+}
+
+open();
+var t = setInterval(function(){
+  if($(".open-left").css("left") >= "0px" ){
+      open();
+  }else{
+  	  close();
+  }
+},4000)
+
+
+$(".list-box").click(function(){
+  console.log($(".open-left").css("left"));
+  var _left = $(".open-left").css("left");
+  if( parseInt(_left) < -50 ){
+	  $(this).find("div").eq(0).animate({top:-200});
+	  setTimeout(function(){
+	    $(".list-box div").eq(0).insertAfter($(".list-box div").eq(5))
+	    $(".list-box div").css("top",0)
+	  },200)
+  }else{
+  	 console.log("撞上了");
+  }
+})
+ 
+</script>
+</html>

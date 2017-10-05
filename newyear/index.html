@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>犬心保</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width,target-densityDpi=device-dpi, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="" />
+<meta http-equiv="pragram" content="no-cache"/>
+<script src="http://cdn.bootcss.com/prefixfree/1.0.7/prefixfree.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+    <script type="text/javascript" src="js/jquery.imgpreload.min.js"></script>
+    <script type="text/javascript">
+
+    // cache buster
+    var t = (new Date).getTime();
+
+    var the_images = [];
+
+    the_images.push('img/loading.png?i=1&t=' + t);
+    the_images.push('img/bg.jpg?i=2&t=' + t);
+    the_images.push('img/border.png?i=3&t=' + t);
+    the_images.push('img/canvas_bg.png?i=4&t=' + t);
+    the_images.push('img/cover.jpg?i=5&t=' + t);
+    the_images.push('img/dog_icon.png?i=6&t=' + t);
+    the_images.push('img/gamestart_btn.png?i=7&t=' + t);
+    the_images.push('img/guan.png?i=8&t=' + t);
+    the_images.push('img/invite-btn.png?i=9&t=' + t);
+    the_images.push('img/beef.png?i=10&t=' + t);
+    the_images.push('img/look_btn.png?i=11&t=' + t);
+    the_images.push('img/rule_bg.jpg?i=12&t=' + t);
+    the_images.push('img/ruselt_bg.png?i=13&t=' + t);
+    the_images.push('img/share.png?i=14&t=' + t);
+    the_images.push('img/show_bg.jpg?i=15&t=' + t);
+    the_images.push('img/spring.png?i=16&t=' + t);
+    the_images.push('img/start_btn.png?i=17&t=' + t);
+    the_images.push('img/tags-tips.png?i=18&t=' + t);
+    the_images.push('img/tips.png?i=19&t=' + t);
+    the_images.push('img/too_btn.png?i=20&t=' + t);
+    the_images.push('img/upload_bg.jpg?i=21&t=' + t);
+    the_images.push('img/upload_btn.png?i=22&t=' + t);
+    the_images.push('img/upload2_bg.jpg?i=23&t=' + t);
+    the_images.push('img/upload-reset.png?i=24&t=' + t);
+    the_images.push('img/upload-ture.png?i=25&t=' + t);
+    the_images.push('img/yao_tip.png?i=26&t=' + t);
+    the_images.push('img/zhan_btn.png?i=27&t=' + t);
+
+    var icnt = the_images.length;
+    var num = 0;
+    jQuery.imgpreload(the_images, {
+        each: function() {
+            var pattern = new RegExp("i=(\\d)", "gi");
+            var m = pattern.exec($(this).attr('src'));
+            var status = $(this).data('loaded') ? 'success' : 'error';
+            num++;
+            if(num>2){$(".loading").show();}
+            $(".loading span").html((num/icnt).toFixed(2)*100+"%");
+        },
+        all: function() {
+            $(".loading").hide();
+            $('#wrap1').show();
+        }
+    });
+</script>
+</head>
+<body>
+<div class="loading" style="display:none;">
+   <img src="img/bg.jpg" width="100%" height="100%" />
+   <div class="box">
+       <img src="img/loading.png" width="179" height="202" >
+       <span>50%</span>
+   </div> 
+</div>
+<div id="wrap1" style="display:none;" >
+<div class="cover">
+  <img class="cover-img" src="img/cover.jpg" width="100%" height="100%" />
+  <div class="btn-box"> 
+      <a class="fl" href="upload.html" >
+          <img class="btn start_btn" src="img/start_btn.png" width="226" />
+     </a> 
+     <a class="fr">
+         <img class="btn look-btn" src="img/look_btn.png" width="226" />
+    </a> 
+    </div>
+</div>
+
+<!--活动机制-->
+<div class="rule">
+  <img src="img/rule_bg.jpg" width="100%" height="100%" />
+  <a href="upload.html"><img src="img/gamestart_btn.png" width="238" /></a>
+</div>
+</div>
+<script type="text/javascript">
+  $(".look-btn").click(function(){
+    $(".rule").show();
+ })
+
+</script>
+</body>
+</html>

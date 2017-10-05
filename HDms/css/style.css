@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{tap-highlight-color:rgba(0,0,0,0); margin:0px; padding:0px; font-family: "微软雅黑"；}
+a{text-decoration:none; border:none;}
+img{border:none;}
+input:focus,select:focus{ outline:none;}
+ul,li{ list-style:none;}
+html,body{ background:#FFF;}
+img{ display:block;}
+.fr{ float: right; }
+.fl{ float: left; }
+.btn:active{ transform:translate(2px,2px)}
+#wrap,#loading,.page,.opacity_bg{ width: 640px; margin: 0 auto; position:absolute; min-height:1008px; top: 0px; bottom:0px;  height:100%; overflow: hidden; }
+
+/*.page img{ position:absolute;}*/
+.page1{ background:url(../img/page1.jpg) no-repeat left top;} 
+.page2{ background:url(../img/page2.jpg) no-repeat left top;} 
+.page3{ background:#fff url(../img/page3.jpg) no-repeat left top;} 
+.page4{ background:url(../img/page4.jpg) no-repeat left top;} 
+.page5{ background:url(../img/page5.jpg) no-repeat left top; z-index: 20; } 
+.page6{ background:url(../img/page6.jpg) no-repeat left top;}
+.page7{ background:url(../img/page6.jpg) no-repeat left top;}
+.round{ background:url(../img/first_round.jpg) no-repeat left top;}
+
+/*.page1 div{ margin-top:250px;}*/
+.start_btn{ position: absolute; left: 0px; top:810px;  }
+.rule_btn{ position: absolute; right:250px; top:950px;}
+
+.back{ position: absolute; left:200px; bottom:-20px;}
+/*.page3 .back{ position: absolute; left:50px; bottom:0px;}
+.page4 .back{ position: absolute; left:50px; bottom:0px;}
+.page5 .back{ position: absolute; left:50px; bottom:0px;}
+.page6 .back{ position: absolute; left:50px; bottom:0px;}*/
+
+
+
+.page3 ul{ margin-top:300px; height:700px; overflow: hidden;}
+.page3 ul li{font-size: 30px; width: 420px; margin:15px auto 0; line-height:52px; height: 52px; color: #cb281c;}
+.page3 ul li span{display: block; width:60px; text-align: center; margin-right:10px;}
+.page3 ul li div.tx-box{ position: relative; width:52px; height: 52px; }
+.page3 ul li div.tx-box img.tx{ border-radius: 50%; border:1px solid #cb281c; overflow: hidden;}
+.page3 ul li div.name{ margin-left: 50px; width: 140px; font-size: 20px; text-align: center;}
+.page3 ul li div.score{ width:100px; text-align: right;}
+.ph{ position: absolute; left:-8px; top:-18px; }
+
+#score{ position: absolute; left:12px; top:336px;  overflow: hidden; width:130px; height:100px; font-size:72px; line-height:72px; color:#fff;  }
+#score img{ float: left;}
+
+#time{ position: absolute; right:2px; top:336px;  overflow: hidden; width:130px; height:100px; font-size:72px; line-height:72px; color:#fff; }
+#time img{ float: left;}
+.num{ display: block; width: 40px; height: 71px; float: left; background:url(../img/num.png) no-repeat 0 0;}
+
+.page4 .nace_btn{ position:absolute; left:0px; top:350px;  }
+
+.agren_btn{ position: absolute; left:0px; bottom:20px; }
+
+.page5 input{ width: 340px; padding-left:15px; height:58px; background:none; border:none; position: absolute; left:180px; font-size: 24px; color:#fff; line-height:58px; }
+.page5 input.name{ top:533px; }
+.page5 input.tel{ top:706px; }
+.page5 .cj_btn{ position: absolute; left:0px; bottom:10px;}
+
+.page6{ font-size:37px; color:#fff; text-align: center;  }
+.page6 div:first-child{ margin-top: 290px; }
+.page6 div p{ margin-bottom:10px; }
+
+
+.page7 .ruselt_btn,.page7 .first,.page7 .second,.page7 .third,.page7 .fail{ position: absolute; left:0px; top:202px; }
+
+.page7 span{ font-size:60px; position: absolute; width: 150px;height: 70px; left:170px; top:575px; color: #cc2523; z-index: 20; text-align: center; }
+.round{ overflow: hidden; }
+.round .men-box{ position: absolute; left:160px; top:294px; width:320px; height:194px; overflow: hidden; }
+.round .men-box .left{ position: absolute; left:0px; top:0px; }
+.round .men-box .right{ position: absolute; right:0px; top:0px;}
+.round .ml{ position: absolute; left:184px; top:300px; z-index: 10; }
+
+.round .hat,.round .jia{ position: absolute; left:137px; top:284px; display:none; z-index: 100; }
+
+
+.imgs{ position: absolute; left:200px; top:480px; width:3000px; height: 560px;}
+.imgs img{ margin-bottom:30px; transition:all .01s;}
+.imgs img:first-child{ position: relative; top:0px;}
+.imgs img:nth-child(2){ margin-bottom:50px;  transform: scale(1.1,1.1);
+-ms-transform: scale(1.1,1.1); 
+-webkit-transform: scale(1.1,1.1);  
+-o-transform: scale(1.1,1.1);  
+-moz-transform: scale(1.1,1.1); }
+.imgs img:nth-child(3){ float: left; transition:all .2s; margin-left: 40px; margin-right:200px;
+    transform: scale(1.5,1.5);
+-ms-transform: scale(1.5,1.5);  
+-webkit-transform: scale(1.5,1.5); 
+-o-transform: scale(1.5,1.5);   
+-moz-transform: scale(1.5,1.5);
+}
+.imgs img:nth-child(4),.imgs img:nth-child(5),.imgs img:nth-child(6),.imgs img:nth-child(7),.imgs img:nth-child(8){  float: left; margin-right:200px;}

@@ -1,0 +1,23 @@
+
+.myScrollbarV {
+	position:absolute;
+	z-index:100;
+	width:1px;
+	bottom:7px;
+	top:2px;
+	right:3px;
+	height: 377px;
+	background: #610e0c;
+	overflow: visible!important;
+}
+
+#wrapper1 .myScrollbarV{ height: 530px;}
+
+
+.myScrollbarV > div {
+	position:absolute;
+	z-index:100;
+	width:5px;
+	right:-2px;
+	background: #610e0c;
+}

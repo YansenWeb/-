@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北欧</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+
+</head>
+
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!--slide1-->
+        <section class="swiper-slide swiper-slide1">
+           <img src="img/index.jpg" width="100%" height="100%" />
+        </section>
+        <!--slide2-->   
+        <section class="swiper-slide swiper-slide2">
+           <img src="img/show2.jpg" width="100%" height="100%" />
+        </section>
+        <!--slide3-->
+        <section class="swiper-slide swiper-slide3">
+           <img src="img/show3.jpg" width="100%" height="100%" />
+        </section>
+        <!--slide4-->
+        <section class="swiper-slide swiper-slide4">
+           <img src="img/show4.jpg" width="100%" height="100%" />
+           <div class="box form">
+             <h2>填写您的资料</h2>
+             <p>凡在本页填写注册个人信息<br>到店消费享有超低折扣<br>还赠送精美礼品</p>
+             <div>
+               <label>姓名</label>
+               <input type="text" class="name" id="name" value="" /> 
+             </div>
+             <div>
+               <label>电话</label>
+               <input type="tel" class="tel" id="tel" value="" />
+             </div>
+             <button class="btn" id="btn" type="button">填写完成</button>
+           </div>
+        </section>
+        <!--slide5-->
+        <section class="swiper-slide swiper-slide5">
+           <img src="img/show4.jpg" width="100%" height="100%" />
+           <div class="box shop-list">
+              <ul>
+                 <li>
+                   <h2>上海新天地旗舰店</h2>
+                   <p>马当路216号</p>
+                 </li>
+                 <li>
+                   <h2>上海虹桥吉盛伟邦店</h2>
+                   <p>娄山关路75号吉盛伟邦<br>虹桥进口家俬馆3F-306</p>
+                 </li>
+                 <li>
+                   <h2>上海久光店</h2>
+                   <p>南京西路1618号久光百货7楼</p>
+                 </li>
+                 <li>
+                   <h2>上海月星店</h2>
+                   <p>上海市普陀区澳门路168号<br>月星国际家居一层A056-057</p>
+                 </li>
+                 <li>
+                   <h2>上海青浦吉盛伟邦店</h2>
+                   <p>青浦区嘉松中路5369号<br>“吉盛伟邦国际家具村”南区B3馆106号</p>
+                 </li>
+                 <li>
+                   <h2>上海文定店</h2>
+                   <p>徐汇区文定路258号D区5幢</p>
+                 </li>
+              </ul>
+              <a id="backhome" >返回首页</a>
+           </div>
+        </section>
+    </div>
+    
+   <img src="img/arrow.png" id="array" class="resize"> 
+</div>
+
+
+<script>  
+  // 表单提交
+  (function(){
+    var tel = document.getElementById("tel");
+    var name = document.getElementById("name");
+    var btn = document.getElementById("btn");
+    var reg = /^1[3|4|5|7|8]\d{9}$/; 
+    
+    btn.onclick = function(){
+       if(!name.value){
+         alert("请填写您的名字！");
+         return false;
+       }else if(!reg.test(tel.value)){
+         alert("手机号码格式错误！");
+         return false;
+       }
+
+       alert("恭喜你注册成功");
+
+       // 这里提交ajax;
+    }
+
+  })()
+
+		  
+  var mySwiper = new Swiper ('.swiper-container', {
+   direction : 'vertical',
+   onSlideChangeStart: function(swiper){
+     if(swiper.activeIndex == 4 ){
+        array.style.display="none";
+     }else{
+        array.style.display="block";
+     }
+    }
+	})    
+
+   backhome.onclick = function(){
+      mySwiper.slideTo(0, 1000, false);//切换到第一个slide，速度为1秒
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+menu,
+pre,
+form,
+fieldset,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+select,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  font-size: 12px;
+  width: 100%;
+  font-family:"微软雅黑", Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", sans-self;
+  color: #666;
+  background:url(../img/bg.png);
+}
+/** 重置文本格式元素 **/
+a {
+  text-decoration: none;
+  padding:0;
+  margin: 0;
+}
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /*-moz-user-modify: read-write-plaintext-only;*/
+  /*-webkit-user-modify: read-write-plaintext-only;*/
+}
+select::-ms-expand {
+  display: none;
+}
+button{ cursor: pointer;   }
+button:focus,input:focus{ outline: none;    }
+
+input[type=radio]::-ms-check,
+input[type=checkbox]::-ms-check {
+  display: none;
+}
+input[type=text]::-ms-clear,
+input[type=tel]::-ms-clear,
+input[type=number]::-ms-clear {
+  display: none;
+}
+
+html{font-size:10px;font-family:"Hiragino Sans GB","Microsoft YaHei",Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;}
+@media screen and (min-width: 320px) and (max-width:400px) {html{font-size:10px}body{font-size:10px;line-height: 150%;}}
+@media screen and (min-width: 401px) and (max-width:500px) {html{font-size:11px}body{font-size:11px;line-height: 150%;}}
+@media screen and (min-width: 501px) and (max-width:800px) {html{font-size:12px}body{font-size:12px;line-height: 150%;}}
+@media screen and (min-width:801px) {html{font-size:14px}body{font-size:14px; line-height: 150%;}}
+
+.fl-l {
+  float: left;
+}
+.fl-r {
+  float: right;
+}
+
+.oh{ overflow: hidden;  }
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/** 重置列表元素 **/
+ul,
+ol {
+  list-style: none;
+}
+.color-blue {
+  color: #4FBBF9;
+}
+/* 引入图标字体 */
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 21px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* end引入图标字体 */
+
+html,
+body {
+  height: 100%;
+}
+
+a{ color: #2c3335;}
+a:hover{ color: #da241c; }
+
+.title{ display: block; margin:3.5rem auto 1.5rem; text-align: center; position: relative; z-index:100;  }
+
+.title .t-ch{ font-size:1.6rem; line-height:2.8rem; font-weight:bold; }
+.title .t-eg{ font-size:1rem; line-height:2rem; text-transform: uppercase; color: #d3bb97; }
+.title .t-line{ margin:0 auto; height:0px; width:14rem;  border-bottom:1px solid #898a8a; font-size: 0px; line-height: 0; }
+.title .white-line{ display: block; margin:0 auto -1px; width:20px;  height:0px; border-bottom:1px solid #fff; font-size: 0px; line-height: 0; }
+
+
+.new:before{ content:""; width:3rem; height:3rem; position: absolute; z-index:100;  background:url(../img/new-icon.png) no-repeat; background-size:100% auto;}
+
+header{ padding:3.6% 5.2%; line-height: 53px; font-size:20px; background: #fff; }
+header .logo{ display: block; height: 73px; }
+header .sreach-box{ width:390px; height:52px; margin-top:10px; overflow: hidden; }
+header .sreach-box input{ width:284px; height: 38px; margin-top:7px; padding-left:10px; float: left; font-size:20px; }
+header .sreach-box button{ width:53px; height:52px; border:none; margin-left:30px;}
+header .lang{ margin-left:40px; margin-top:10px; }
+header .lang a{ color: #2c3335;}
+header .lang a:hover{ color: #da241c;}
+@media screen and (max-width:1600px) {
+  header{ line-height: 52px; font-size:20px;}
+}
+
+nav{ height: 0; position: relative; }
+.menu{ width:100%; color: #fff; font-size:18px; background:rgba(0,0,0,.6); z-index:10; top:0px; position:absolute;}
+
+.swiper-container img{ display: block; }
+.video-box{ margin-bottom:-120px; height:auto;}
+.video-box video{position: relative; left:0; top:-150%; z-index:0; }
+
+
+
+.menu ul{ width:1600px; margin:0 auto; }
+.menu li{ float: left; width:12%; padding-left:.5%; position:relative;}
+.menu li span{ font-size:30px; margin-right:10px; }
+.menu li a{ display: block; color: #e4e4e4; }
+.menu li>a{ line-height:74px;}
+.menu li dl{ display: none; position: absolute; left:0px; background:rgba(0,0,0,.5); padding-top:30px; padding-bottom:30px;   width:100%; text-indent:30px; }
+.menu li dl a{ line-height:40px; }
+.menu li dl a:hover{ background: rgba(255,255,255,.1);}
+
+.swiper-pagination-bullet{ background:#fff; opacity:.5;}
+.swiper-pagination-bullet-active{ opacity:1; }
+
+@media screen and (max-width:1600px) {
+.menu{ font-size:16px;}
+.menu ul{ width:1200px;}
+.menu li span{ font-size:20px; margin-right:5px; }
+.menu li>a{ line-height:60px;}
+.menu li dl{ padding-top:20px; padding-bottom:20px; text-indent:20px; }
+.menu li dl a{ line-height:30px; }
+/*.swiper-container{ width:100%; top:-60px; margin-bottom:-60px; }      */
+}
+
+footer{ padding-top:4%; margin-top:6%; font-size:1rem; line-height:1.5; background:url(../img/footer-bg.jpg); color: #fff; }
+footer .container{ width:93%; margin:0 auto; }
+footer h2{ font-size:1.2rem; margin-bottom:1rem; }
+footer a{ margin-bottom:4%;  line-height:2;  display: block; color: #fff;     }
+footer p{ margin-bottom:4%; line-height:2;}
+footer .pro-class{ width:20%; float: left; }
+footer .contact-us{ width:36%; margin-right:4%;  float: left; }
+footer .about{ width:20%; float: left; }
+footer .media{ width:20%; float: left; }
+footer .weixin{ width:100%; }
+
+/*分页*/
+.page { width:80%; margin:4% auto; text-align: center; overflow: hidden; }
+.page a { display:block; float: left; width:16%; margin:0 2%;  line-height:3; color: #1b1b1b; font-size:.8rem; margin-bottom:5%; }
+.page a.active{ background:#c2c2c2;}
+.page a.next-page,.page a.last-page{ width:30%; line-height:2; box-sizing:border-box; border:1px solid #7d7d7d; color: #7d7d7d; margin-right:2%;  }
+
+.page a.next-page{ margin-left:18%;}

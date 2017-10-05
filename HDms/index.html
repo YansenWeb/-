@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>麻糬大作战</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width,target-densityDpi=device-dpi, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="" />
+<meta http-equiv="pragram" content="no-cache"/>
+<!-- <script src="http://cdn.bootcss.com/prefixfree/1.0.7/prefixfree.min.js"></script> -->
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/touch.js"></script>
+</head>
+<body>
+<audio style="display:none;"  id="music" src="img/music.mp3" autoplay="autoplay" autobuffer loop></audio>
+<div id="wrap" style="display:none;" >
+    <!-- 加载背景 -->
+    <img src="img/first_round.jpg" style="display:none;" >
+    <img src="img/second_round.jpg" style="display:none;" >
+    <img src="img/third_round.jpg" style="display:none;" >
+
+    <!-- page1 -->
+    <div class="page page1" >
+       <!-- <span class="rule_btn">规则</span> -->
+       <!-- <div> -->
+         <!-- <img class="ph_btn" src="img/ph_btn.png" width="100%" /> -->
+         <!-- <img class="login_btn" src="img/login_btn.png" width="100%" /> -->
+         <img class="start_btn" src="img/start_btn.png" width="100%" />
+         <img class="rule_btn" src="img/rule_btn.png" width="122" height="35" />
+       <!-- </div> -->
+    </div>
+    <!-- page1 end -->
+
+    <!-- 活动规则 -->
+    <div class="page page2" style="display:none;" >
+        <img class="agren_btn" src="img/agren_btn.png" width="100%" />
+        <img class="back" src="img/back.png" width="217" height="100"  />
+    </div>
+   <!--  活动规则 end -->
+
+       
+    <div class="page page3"  style="display:none;">
+        <ul>
+          <li>
+             <span class="fl" >1</span>
+             <div class="tx-box fl">
+             <img class="ph ph1" src='img/ph1.png' width='34px'/>
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+          <li>
+             <span class="fl" >2</span>
+             <div class="tx-box fl">
+             <img class="ph ph2" src='img/ph2.png' width='34px'/>
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+          <li>
+             <span class="fl" >3</span>
+             <div class="tx-box fl">
+             <img class="ph ph3" src='img/ph3.png' width='34px'/>
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+          <li>
+             <span class="fl" >4</span>
+             <div class="tx-box fl">
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+          <li>
+             <span class="fl" >5</span>
+             <div class="tx-box fl">
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+          <li>
+             <span class="fl" >6</span>
+             <div class="tx-box fl">
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+          <li>
+             <span class="fl" >7</span>
+             <div class="tx-box fl">
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+          <li>
+             <span class="fl" >8</span>
+             <div class="tx-box fl">
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+          <li>
+             <span class="fl" >9</span>
+             <div class="tx-box fl">
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+          <li>
+             <span class="fl" >10</span>
+             <div class="tx-box fl">
+             <img class="tx" src="img/tx.jpg" width="52px" /></div> 
+             <div class="name fl">XXXX</div>
+             <div class="fr score" >120</div>
+          </li>
+        </ul> 
+        <img class="back" src="img/back.png" width="217" height="100"  />
+    </div>
+
+
+    <div class="page page4" style="display:none;" >
+        <img class="nace_btn" src="img/nace_btn.png" width="100%" />
+        <!-- <img class="back" src="img/back.png" width="217" height="100"  /> -->
+    </div>
+
+    <!-- 用户注册 -->
+    <div class="page page5" style="display:none;" >
+        <input type="text" value="" class="name" />
+        <input type="text" value="" class="tel" />
+
+        <img class="cj_btn" src="img/cj_btn.png" width="100%" />
+        <img class="back" src="img/back.png" width="217" height="100"  />
+    </div> 
+    
+    <!-- 获奖信息 -->
+    <div class="page page6" style="display:none;" >
+        <div>
+          <img src="img/jilu.png" width="100%" />
+          <p>一等奖：XXX</p>
+          <p>二等奖：XXX</p>
+          <p>三等奖：XXX</p>
+        </div>
+        <div>
+          <img src="img/jilu.png" width="100%" />
+          <p>得分：XXX</p>
+          <p>排名：XXX</p>
+        </div>
+        <img class="back" src="img/back.png" width="217" height="100"  />
+    </div>
+    
+    <!-- 抽奖页面 -->
+    <div class="page page7" style="display:none;" >
+        <span>000</span>
+        <!-- 开始抽奖btn -->
+        <img class="ruselt_btn" src="img/cj_ruselt.png" /> 
+        <!-- 一等奖日本五日游 -->
+        <img class="first" src="img/first.png"  style="display:none;" /> 
+        <!-- 二等奖豪华情侣套餐 -->
+        <img class="second" src="img/second.png" style="display:none;" />
+        <!-- 三等奖京东优惠券  -->
+        <img class="third" src="img/third.png" style="display:none;" /> 
+        <!-- 没中奖 -->
+        <img class="fail" src="img/fail.png" style="display:none;" /> 
+        <img class="back" src="img/back.png" width="217" height="100"  />
+    </div>
+    
+    <!-- 第一回合 -->
+    <div class="page round" style="display:none;" >
+       <!-- score -->
+       <div id="score">
+         <span class="num s1" ></span>
+         <span class="num s2"></span>
+         <span class="num s3"></span>
+       </div> 
+
+       <!-- score -->
+       <div id="time">
+         <span class="num t1"></span>
+         <span class="num t2"></span>
+         <span class="num t3"></span>
+       </div>  
+
+       <!-- <img class="ml" src="img/ml.png" width="272" height="72" /> -->
+
+       <img class="hat" src="img/hat.png" width="343" height="302" />
+       <img class="jia" src="img/jia.png" width="343" height="302" />
+
+       <div class="men-box">
+          <img class="left" src="img/men.png" width="160" height="171"  /> 
+          <img class="right" src="img/men.png" width="160" height="171"  /> 
+       </div>
+       <div class="imgs">
+         <img src="img/img1.png" width="200px" />
+         <img src="img/img2.png" width="200px" />
+         <img src="img/img1.png" width="200px" />
+         <img src="img/img2.png" width="200px" />
+         <img src="img/img1.png" width="200px" />
+         <img src="img/img2.png" width="200px" />
+         <img src="img/img1.png" width="200px" />
+       </div>  
+    </div>
+
+</div>
+<script type="text/javascript" src="js/index.js" ></script>
+</body>
+</html>

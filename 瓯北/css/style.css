@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height:100%;
+  /*font-size:3.125%;*/
+}
+html{font-size:62.5%;}
+body{
+    font-family:"microsoft yahei";
+}
+.swiper-container {
+    width: 100%;
+  height: 100%;
+    background:#b1b1b1;
+}  
+
+.swiper-slide{
+    width:100%;
+    height:100%;
+    background-color:#1A1A1A
+}
+img{
+    display:block;
+}
+.swiper-pagination-bullet {
+width: 6px;
+height: 6px;
+background: #fff;
+opacity: .4;
+}
+.swiper-pagination-bullet-active {
+opacity: 1;
+}
+@-webkit-keyframes start {
+    0%,30% {opacity: 0;-webkit-transform: translate(0,10px);}
+    60% {opacity: 1;-webkit-transform: translate(0,0);}
+    100% {opacity: 0;-webkit-transform: translate(0,-8px);}
+}
+@-moz-keyframes start {
+    0%,30% {opacity: 0;-moz-transform: translate(0,10px);}
+    60% {opacity: 1;-moz-transform: translate(0,0);}
+    100% {opacity: 0;-moz-transform: translate(0,-8px);}
+}
+@keyframes start {
+    0%,30% {opacity: 0;transform: translate(0,10px);}
+    60% {opacity: 1;transform: translate(0,0);}
+    100% {opacity: 0;transform: translate(0,-8px);}
+}
+/*.ani{
+    position:absolute;
+    }
+.txt{
+    position:absolute;
+}*/
+#array{
+    position:absolute;z-index:999;-webkit-animation: start 1.5s infinite ease-in-out;
+  width:10%;height:auto; bottom:2%; left:50%; margin-left: -5%;
+}
+/*.ys{ text-align: center; font-size: 3em; display: block; width: 100%; max-height: 5em; font-family: Arial; font-weight: bold; color: #939393; }*/
+.box{ position: absolute; left:50%; top:50%; margin-left:-30%; width:60%; background: #fff; text-align: center; box-sizing:border-box;  padding:2rem; box-shadow:0px 4px 21px rgba(0,0,0,.4)  }
+.box .btn,.box a{ text-decoration: none; display: block; width:50%; background: #0c0307; border:none; color: #fff; font-size:1.2rem; line-height:2.2;}
+
+.form h2{ font-size:1.8rem; font-weight:normal; line-height:2.6; width:90%; border-bottom:.5px solid #4f4f4f; margin:0 auto .6rem; }
+.form p{ font-size:1rem; line-height:1.5; margin-bottom:1rem;  }
+.form div{ margin-bottom:2.2rem; }
+.form input{ width:70%; height:2.6rem; border-radius: 0px; box-sizing:border-box; padding-left:10px; }
+.form label{ display: inline-block; float:left; /*width:20%;*/ margin-right:1%;  font-size:1rem; line-height: 2.4; text-align: left}
+.form{ height:28rem; margin-top:-14rem;}
+.form .btn{  margin:3rem auto 1rem;}
+
+.shop-list h2{ font-size:1.5rem; font-weight:normal; line-height:1.7; width:90%; border-bottom:.5px solid #4f4f4f; margin:0 auto .6rem; }
+.shop-list p{ font-size:1rem; line-height:1.5; margin-bottom:1rem;  }
+.shop-list{ height:44rem; margin-top: -22rem;}
+.shop-list li{ list-style: none; }
+.shop-list a{ margin:0 auto 1rem;}

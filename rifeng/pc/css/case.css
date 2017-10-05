@@ -1,0 +1,45 @@
+.case-list{ background: url(../img/news-bg.jpg) repeat-x; padding-top:80px; }
+.case-list .tab{ width:860px; margin:0 auto 37px; padding-top:53px;}
+.case-list .tab li{ width:168px; border:2px solid #fff; float: left; text-align: center; line-height:46px; font-size:1.2rem;  cursor: pointer; }
+.case-list .tab li.active{ border:2px solid #ceb290; color: #ceb290; }
+
+.case-box{ max-width:1356px; min-width:960px;  width:98%;  margin:0 auto;}
+
+.case-box li{ width:28.333%; float: left; text-align: center; box-sizing: border-box; padding:1%; margin:2.5%; background: #fff; border:1px solid #e5e4e4; box-shadow:0px 0px 30px rgba(25,25,25,.2); }
+.case-box li h3{ font-size:1rem; margin:20px 0; text-align: center; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.case-box li a{ display: block; width:144px; height:32px; margin:0 auto; line-height: 32px;  font-size:14px;  border:1px solid #e5e4e4; background: #fff; box-shadow:0px 0px 30px rgba(25,25,25,.2); border-radius:16px; }
+.case-box li a span{ color:#5aa1d8;}
+
+/*@media screen and (max-width:1356px) {
+  .case-box{ width:1200px; }
+  .case-box li{ padding:10px; margin:14px;}
+  .case-box li a{ margin-bottom:20px; }
+}*/
+
+
+
+.case-main{ background: url(../img/white-bg.jpg) repeat-x; padding-top:80px; }
+.case-menu{  padding-top:53px; padding-bottom:35px; margin:0 auto; width:1020px; }
+.case-menu a{ font-size:24px; color:#3d3d3d; line-height:44px; display:block; float: left; margin:0 20px; width: 160px; text-align: center; border:2px solid transparent; }
+.case-menu a.active{ border:2px solid #ceb290; color: #ceb290;  }
+
+.case-article{ width:1400px; padding:2%; margin:0 auto; background:#fff; box-shadow:0px 0px 50px rgba(16,5,10,.1); }
+
+.case-article .swiper-container{ margin-bottom: 0px; top:0;}
+.case-article article{ padding:0 60px; }
+.case-article article h1{ font-size:32px; line-height:1; margin-top:70px; margin-bottom:20px; text-align: center; color: #464646; }
+.case-article article h2{ width:370px; height:40px; background:url(../img/case/h2-bg.png) no-repeat; font-size:20px; font-weight: normal; line-height: 40px; padding-left:16px;
+  margin-bottom:30px; }
+.case-article article div{ width:46%; font-size:20px; line-height:1.8; color: #8f8f8f; margin-top:80px; }
+.case-article article div p{ padding-left:5px; text-align: justify;  }
+.case-article article div.part3{ margin-bottom:30px;   }
+
+.back-prev-page{ width:180px; font-size:35px; color: #464646; display: block; text-align: center; border-bottom:3px solid #464646; line-height:1.5;  margin:40px auto -40px; }
+.back-prev-page:hover{ border-bottom:3px solid #da241c; }
+.case-container{ position: relative; }
+.case-article .swiper-button-next{ background:url(../img/case-arr-right.png) no-repeat; width: 41px; height: 44px; right:-20px; }
+.case-article .swiper-button-prev{ background:url(../img/case-arr-left.png) no-repeat; width: 41px; height: 44px; left:-20px; }
+
+@media screen and (max-width:1400px) {
+ .case-article{ width: 1200px; }
+}

@@ -1,0 +1,266 @@
+.map{ padding-top:80px; background: url(../img/white-bg.jpg) repeat-x;}
+
+.map .list{ text-align: center; width: 600px; margin:0 auto; }
+.map .list a{ display: inline-block; float: left; width:140px; font-size:1.2rem; color:#3d3d3d; line-height:2; margin:50px 30px 40px; }
+.map .list a.active{ border-bottom:4px solid #ae9679; color:#ae9679; }
+
+.map .map-sreach{ position: relative; }
+
+.map .map-img{ position:relative; left:50%; top:100px; width:1000px; margin-left:-500px;  margin-bottom:100px; }
+
+/*@media screen and ( max-width:1400px){
+    .map .map-img{ transform: scale(.9,.9);
+        transform-origin:center 0;
+                   height:870px;
+   } 
+}
+
+
+@media screen and ( max-width:1300px){
+    .map .map-img{ transform: scale(.8,.8);
+                   transform-origin:center 0;
+                   height:760px;
+   } 
+}
+
+@media screen and ( max-width:1200px){
+    .map .map-img{ transform: scale(.7,.7);
+                   transform-origin:center 0;
+                   height: 650px;
+   } 
+}*/
+
+.map .map-img span{position: absolute; z-index:10; width:32px; height: 38px; padding-top:8px; font-size: 12px; color: #FFF; line-height:12px; text-align: center; cursor: pointer; }
+.map .map-img span.red{ background: url(../img/red-icon.png) no-repeat center center; background-size:100% 100%; }
+.map .map-img span.gray{ background: url(../img/gray-icon.png) no-repeat center center; background-size:100% 100%; }
+.map .map-img span:hover{ transform: scale(1.8,1.8); transform-origin:50% 100%;}
+
+
+/*.map .map-img span.city1{ left:237px; top:327px;}
+.map .map-img span.city2{ left:250px; top:540px;}
+.map .map-img span.city3{ left:426px; top:450px;}
+.map .map-img span.city4{ left:548px; top:384px;}
+.map .map-img span.city5{ left:567px; top:596px;}
+
+.map .map-img span.city6{ left:498px; top:763px;}
+
+.map .map-img span.city7{ left:648px; top:338px;}
+
+.map .map-img span.city8{ left:645px; top:425px;}
+.map .map-img span.city9{ left:694px; top:492px;}
+.map .map-img span.city10{ left:694px; top:589px;}
+.map .map-img span.city11{ left:694px; top:687px;}
+.map .map-img span.city12{ left:722px; top:817px;}
+.map .map-img span.city13{ left:770px; top:402px;}
+
+.map .map-img span.city14{ left:794px; top:600px;}
+.map .map-img span.city15{ left:790px; top:687px;}
+.map .map-img span.city16{ left:798px; top:813px;}
+.map .map-img span.city17{ left:834px; top:415px;}
+.map .map-img span.city18{ left:830px; top:539px;}
+.map .map-img span.city19{ left:860px; top:677px;}
+.map .map-img span.city20{ left:876px; top:782px;}
+.map .map-img span.city21{ left:854px; top:327px;}
+.map .map-img span.city22{ left:880px; top:348px;}
+.map .map-img span.city23{ left:908px; top:431px;}
+.map .map-img span.city24{ left:910px; top:585px;}
+.map .map-img span.city25{ left:926px; top:717px;}
+
+.map .map-img span.city26{ left:957px; top:539px;}
+.map .map-img span.city27{ left:966px; top:631px;}
+.map .map-img span.city28{ left:1000px; top:543px;}
+.map .map-img span.city29{ left:1074px; top:135px;}
+.map .map-img span.city30{ left:1050px; top:216px;}
+.map .map-img span.city31{ left:977px; top:319px;}
+.map .map-img span.city32{ left:1010px; top:755px;}
+.map .map-img span.city33{ left:740px; top:900px;}*/
+/*<span class="city1 gray">新疆</span>
+<span class="city2 gray">西藏</span>
+<span class="city3 red">青海</span>
+<span class="city4 gray">甘肃</span>
+<span class="city5 gray">四川</span>
+<span class="city6 gray">云南</span>
+<span class="city7 gray">内蒙古</span>
+<span class="city8 gray">宁夏</span>
+<span class="city9 gray">陕西</span>
+<span class="city10 gray">重庆</span>
+<span class="city11 gray">贵州</span>
+<span class="city12 gray">广西</span>
+<span class="city13 gray">山西</span>
+<span class="city14 gray">湖北</span>
+<span class="city15 gray">湖南</span>
+<span class="city16 gray">广东</span>
+<span class="city17 gray">河北</span>
+<span class="city18 gray">河南</span>
+<span class="city19 gray">江西</span>
+<span class="city20 gray">深圳</span>
+<span class="city21 gray">北京</span>
+<span class="city22 gray">天津</span>
+<span class="city23 gray">山东</span>
+<span class="city24 gray">安徽</span>
+<span class="city25 gray">福建</span>
+<span class="city26 gray">江苏</span>
+<span class="city27 gray">浙江</span>
+<span class="city28 gray">上海</span>
+<span class="city29 gray">黑龙江</span>
+<span class="city30 gray">吉林</span>
+<span class="city31 gray">辽宁</span>
+<span class="city32 gray">台湾</span>
+<span class="city33 gray">海南</span>*/
+
+
+.map .map-img span.city1{ left:200px; top:280px;}
+.map .map-img span.city2{ left:217px; top:479px;}
+.map .map-img span.city3{ left:368px; top:392px;}
+.map .map-img span.city4{ left:474px; top:323px;}
+.map .map-img span.city5{ left:490px; top:517px;}
+
+.map .map-img span.city6{ left:430px; top:657px;}
+
+.map .map-img span.city7{ left:557px; top:294px;}
+
+.map .map-img span.city8{ left:552px; top:342px;}
+.map .map-img span.city9{ left:600px; top:427px;}
+.map .map-img span.city10{ left:587px; top:513px;}
+.map .map-img span.city11{ left:570px; top:600px;}
+.map .map-img span.city12{ left:620px; top:660px;}
+.map .map-img span.city13{ left:664px; top:350px;}
+
+.map .map-img span.city14{ left:683px; top:494px;}
+.map .map-img span.city15{ left:680px; top:594px;}
+.map .map-img span.city16{ left:692px; top:660px;}
+.map .map-img span.city17{ left:720px; top:320px;}
+.map .map-img span.city18{ left:690px; top:430px;}
+.map .map-img span.city19{ left:745px; top:583px;}
+/*.map .map-img span.city20{ left:876px; top:782px;}*/
+.map .map-img span.city21{ left:734px; top:270px;}
+.map .map-img span.city22{ left:754px; top:290px;}
+.map .map-img span.city23{ left:780px; top:377px;}
+.map .map-img span.city24{ left:783px; top:484px;}
+.map .map-img span.city25{ left:795px; top:600px;}
+
+.map .map-img span.city26{ left:818px; top:427px;}
+.map .map-img span.city27{ left:830px; top:520px;}
+.map .map-img span.city28{ left:854px; top:465px;}
+.map .map-img span.city29{ left:920px; top:122px;}
+.map .map-img span.city30{ left:906px; top:191px;}
+.map .map-img span.city31{ left:845px; top:237px;}
+.map .map-img span.city32{ left:863px; top:653px;}
+.map .map-img span.city33{ left:635px; top:760px;}
+
+
+.map .container{ width:94%; max-width:1400px; box-sizing: border-box; padding:20px 30px; margin:0 auto; background:#fff; box-shadow:0px 0px 30px rgba(25,25,25,.1); border-radius:10px; overflow: hidden;  }
+.map .container .map-sreach-box{ margin-top:100px; width: 100%; text-align: right;  }
+.map .container .map-sreach-box label{ margin-right:10px; margin-left:10px; font-size:20px; }
+.map .container .map-sreach-box select{ width:237px; height: 40px; border:1px solid #ebeced; border-radius:5px; font-size:18px; }
+.map .container .map-sreach-box button{ width:150px; height: 40px; background: #424448; border-radius: 5px; margin-left:10px; border:none; color: #fff;  }
+
+
+#PowerSearch{ width:150px; height: 40px; background: #424448; border-radius: 5px; margin-left:10px; border:none; color: #fff;  }
+#map-sreach-btn{ float:right; width:150px; height: 40px; font-size:20px; line-height: 40px; text-align: center; background: #424448; border-radius: 5px; margin-left:10px; border:none; color: #fff;}
+
+.map .city-box{ width:100%; font-size:1rem; line-height:2; margin-top:60px; display:inline-block; }
+.map .city-box div{ float: left; display: inline-block; margin-right:25px; white-space: nowrap; }
+
+.map .map-list{ border-top:1px solid #d2d2d2; padding-top:10px; margin-top:40px;  }
+.map .map-list li{ width:49%; float: left; border:1px solid #d2d2d2; box-sizing: border-box; line-height:2; padding:15px; margin-top:42px; position: relative;  }
+.map .map-list li:nth-child(2n+1){ margin-right:2%; }
+.map .map-list li h2{ font-size:.9rem;}
+.map .map-list li p{ font-size:.8rem;}
+.map .map-list li span{ font-size:.7rem;}
+.map .map-list li img{ position: absolute; right:10%; top:50%; margin-top:-1.7rem;  width:3.5rem; }
+
+.pc-slide {
+    width:100%;
+    margin: 0 auto;
+}
+
+.view{ position: relative;}
+
+.view .swiper-container {
+    width:100%;
+    /*height:697px;*/
+}
+
+.view .swiper-slide img{ width: 100%; }
+
+
+.view .arrow-left {
+    background: url(../img/case-arr-left.png) no-repeat left top;
+    position: absolute;
+    left:-20px;
+    top: 50%;
+    margin-top: -22px;
+    width: 41px;
+    height: 44px;
+    z-index: 10;
+}
+
+.view .arrow-right {
+    background: url(../img/case-arr-right.png) no-repeat left bottom;
+    position: absolute;
+    right:-20px;
+    top: 50%;
+    margin-top:-22px;
+    width:41px;
+    height:44px;
+    z-index:10;
+}
+
+.preview {
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+}
+
+.preview .swiper-container {
+    width:1100px;
+    /*height:220px;*/
+    margin-left:50px;
+}
+
+.preview .swiper-slide {
+	position: relative;
+}
+
+.preview .slide6 {
+    width:220px;
+}
+
+.preview .arrow-left {
+    background: url(../img/arrow-left.png) no-repeat left top;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -12px;
+    width:15px;
+    height:24px;
+    z-index: 10;
+}
+
+.preview .arrow-right {
+    background: url(../img/arrow-right.png) no-repeat left bottom;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -12px;
+    width:15px;
+    height:24px;
+    z-index: 10;
+}
+
+/*.preview img {
+    width:220px;
+    height: 220px;  
+}*/
+
+.preview .active-nav:after{
+   content: "";
+   position: absolute;
+   left: 0;
+   top:0;
+   background-color:rgba(0,0,0,.2); 
+   width: 100%;
+   height: 100%;
+   z-index: 100;
+}
